@@ -1,0 +1,44 @@
+{
+  "d": [
+
+    {
+      "location": {
+        "latitude": 36.72556,
+        "longitude": 10.85528
+      },
+      "id": "fcab7f8d-0d89-43b0-a11a-12415a4bb9c1",
+      "name": "Dottie",
+      "address": "714 Armistice Alley",
+      "postcode": null,
+      "region": null,
+      "city": "El Mida",
+      "country": "Tunisia"
+    },
+    {
+      "location": {
+        "latitude": 45.8315,
+        "longitude": 1.2578
+      },
+      "id": "38905470-accb-4905-8091-8418f6ea8ed9",
+      "name": "Dryden",
+      "address": "26241 Mosinee Terrace",
+      "postcode": "87090 CEDEX 9",
+      "region": "Limousin",
+      "city": "Limoges",
+      "country": "France"
+    },
+    {
+      "location": {
+        "latitude": 47.49865,
+        "longitude": 34.6574
+      },
+      "id": "2725949a-a1a5-45f8-ab29-4605629f9b49",
+      "name": "Fairfield",
+      "address": "200 Manufacturers Plaza",
+      "postcode": null,
+      "region": null,
+      "city": "Energodar",
+      "country": "Ukraine"
+    }
+  ]
+}
