@@ -57862,132 +57862,6 @@ titleCls:Ext.baseCSSPrefix + 'tooltiptitle', toolCls:[Ext.baseCSSPrefix + 'panel
     me.targetListeners = target.on(listeners);
   }
 }}});
-Ext.define('Ext.dataview.plugin.ListPaging', {extend:Ext.plugin.Abstract, alias:'plugin.listpaging', alternateClassName:'Ext.plugin.ListPaging', config:{autoPaging:false, bufferZone:8, loadMoreText:'Load More...', noMoreRecordsText:'No More Records', loadMoreCmp:{xtype:'component', cls:Ext.baseCSSPrefix + 'listpaging', scrollDock:'end', hidden:true, inheritUi:true}, loading:false}, loadTpl:'\x3cdiv class\x3d"' + Ext.baseCSSPrefix + 'loading-spinner"\x3e' + '\x3cspan class\x3d"' + Ext.baseCSSPrefix + 
-'loading-top"\x3e\x3c/span\x3e' + '\x3cspan class\x3d"' + Ext.baseCSSPrefix + 'loading-right"\x3e\x3c/span\x3e' + '\x3cspan class\x3d"' + Ext.baseCSSPrefix + 'loading-bottom"\x3e\x3c/span\x3e' + '\x3cspan class\x3d"' + Ext.baseCSSPrefix + 'loading-left"\x3e\x3c/span\x3e' + '\x3c/div\x3e' + '\x3cdiv class\x3d"' + Ext.baseCSSPrefix + 'message"\x3e{message}\x3c/div\x3e', init:function(list) {
-  var me = this;
-  list.on('storechange', 'onStoreChange', me);
-  me.bindStore(list.getStore());
-  me.addLoadMoreCmp();
-}, destroy:function() {
-  Ext.destroy(this._storeListeners);
-  this.callParent();
-}, updateAutoPaging:function(enabled) {
-  var scroller = this.getCmp().getScrollable(), listeners = {scroll:'onScroll', scope:this};
-  if (enabled) {
-    scroller.on(listeners);
-    this.ensureBufferZone();
-  } else {
-    scroller.un(listeners);
-  }
-}, bindStore:function(store) {
-  var me = this, listeners = {beforeload:'onStoreBeforeLoad', load:'onStoreLoad', filter:'onFilter', destroyable:true, scope:me};
-  me._storeListeners = Ext.destroy(me._storeListeners);
-  if (store) {
-    me._storeListeners = store.on(listeners);
-  }
-}, disableDataViewMask:function() {
-  var list = this.cmp;
-  this._listMask = list.getLoadingText();
-  list.setLoadingText(null);
-}, enableDataViewMask:function() {
-  var list;
-  if (this._listMask) {
-    list = this.cmp;
-    list.setLoadingText(this._listMask);
-    delete this._listMask;
-  }
-}, applyLoadMoreCmp:function(config, instance) {
-  return Ext.updateWidget(instance, config, this, 'createLoadMoreCmp');
-}, createLoadMoreCmp:function(config) {
-  return Ext.apply({html:this.getLoadTpl().apply({message:this.getLoadMoreText()})}, config);
-}, updateLoadMoreCmp:function(loadMoreCmp, old) {
-  Ext.destroy(old);
-  if (loadMoreCmp) {
-    loadMoreCmp.el.on({tap:'loadNextPage', scope:this});
-  }
-}, onScroll:function() {
-  this.ensureBufferZone();
-}, updateLoading:function(isLoading) {
-  this.getLoadMoreCmp().toggleCls(this.loadingCls, isLoading);
-}, onStoreChange:function(list, store) {
-  this.bindStore(store);
-}, onStoreBeforeLoad:function(store) {
-  if (store.getCount() === 0) {
-    this.getLoadMoreCmp().hide();
-  }
-}, onStoreLoad:function() {
-  this.syncState();
-}, onFilter:function(store) {
-  this.getLoadMoreCmp.setVisible(store.getCount() === 0);
-}, addLoadMoreCmp:function() {
-  var me = this;
-  if (!me.isAdded) {
-    me.cmp.add(me.getLoadMoreCmp());
-    me.isAdded = true;
-    me.syncState();
-  }
-}, storeFullyLoaded:function() {
-  var store = this.cmp.getStore(), total = store ? store.getTotalCount() : null;
-  return total !== null ? total <= store.currentPage * store.getPageSize() : false;
-}, loadNextPage:function() {
-  var me = this, list = me.cmp;
-  if (me.storeFullyLoaded()) {
-    return;
-  }
-  me.setLoading(true);
-  me.disableDataViewMask();
-  me.currentScrollToTopOnRefresh = list.getScrollToTopOnRefresh();
-  list.setScrollToTopOnRefresh(false);
-  list.getStore().nextPage({addRecords:true});
-}, privates:{loadingCls:Ext.baseCSSPrefix + 'loading', ensureBufferZone:function() {
-  var me = this, list = me.cmp;
-  if (list.isPainted()) {
-    me.ensureBufferZone = me.doEnsureBufferZone;
-    me.doEnsureBufferZone();
-    return;
-  }
-  if (!me.waitingForPainted) {
-    me.waitingForPainted = true;
-    list.on({painted:{single:true, fn:function() {
-      delete me.waitingForPainted;
-      me.ensureBufferZone();
-    }}});
-  }
-}, doEnsureBufferZone:function() {
-  var me = this, list = me.cmp, store = list.getStore(), scroller = list.getScrollable(), count = store && store.getCount(), bufferZone = me.getBufferZone(), item, box, y, index;
-  if (!store || !count || !scroller || me.getLoading()) {
-    return;
-  }
-  index = Math.min(Math.max(0, count - bufferZone), count - 1);
-  item = list.mapToItem(store.getAt(index));
-  box = item && item.element.getBox();
-  if (!box) {
-    return;
-  }
-  y = bufferZone > 0 ? box.top + 1 : box.bottom;
-  if (y > scroller.getElement().getBox().bottom) {
-    return;
-  }
-  me.loadNextPage();
-}, getLoadTpl:function() {
-  return Ext.XTemplate.getTpl(this, 'loadTpl');
-}, syncState:function() {
-  var me = this, list = me.cmp, loadCmp = me.getLoadMoreCmp(), full = me.storeFullyLoaded(), store = list.store, message = full ? me.getNoMoreRecordsText() : me.getLoadMoreText();
-  if (store && store.getCount()) {
-    loadCmp.show();
-  }
-  me.setLoading(false);
-  loadCmp.setHtml(me.getLoadTpl().apply({message:message}));
-  loadCmp.setDisabled(full);
-  if (me.currentScrollToTopOnRefresh !== undefined) {
-    list.setScrollToTopOnRefresh(me.currentScrollToTopOnRefresh);
-    delete me.currentScrollToTopOnRefresh;
-  }
-  me.enableDataViewMask();
-  if (me.getAutoPaging()) {
-    me.ensureBufferZone();
-  }
-}}});
 Ext.define('Ext.field.BoxLabelable', {extend:Ext.Mixin, mixinConfig:{id:'boxLabelable', after:{initElement:'afterInitElement'}}, config:{boxLabel:null, boxLabelAlign:null}, boxLabeledCls:Ext.baseCSSPrefix + 'box-labeled', getBodyTemplate:function() {
   return [{reference:'boxWrapElement', cls:Ext.baseCSSPrefix + 'box-wrap-el', children:[{reference:'boxElement', cls:Ext.baseCSSPrefix + 'box-el', children:this.getBoxTemplate()}, {tag:'label', reference:'boxLabelElement', cls:Ext.baseCSSPrefix + 'box-label-el'}]}];
 }, getBoxTemplate:Ext.emptyFn, updateBoxLabel:function(boxLabel) {
@@ -61918,6 +61792,8 @@ Ext.define('Ext.field.RadioGroup', {extend:Ext.field.FieldGroupContainer, xtype:
   }
   return values;
 }});
+Ext.define('Ext.field.trigger.Search', {extend:Ext.field.trigger.Trigger, xtype:'searchtrigger', alias:'trigger.search', classCls:Ext.baseCSSPrefix + 'searchtrigger'});
+Ext.define('Ext.field.Search', {extend:Ext.field.Text, xtype:'searchfield', alternateClassName:'Ext.form.Search', inputType:'search', triggers:{search:{type:'search', side:'left'}}, classCls:Ext.baseCSSPrefix + 'searchfield'});
 Ext.define('Ext.form.Panel', {extend:Ext.field.Panel, xtype:'formpanel', isFormPanel:true, mixins:[Ext.mixin.FieldDefaults], alternateClassName:'Ext.form.FormPanel', classCls:Ext.baseCSSPrefix + 'formpanel', element:{reference:'element', tag:'form', novalidate:'novalidate'}, config:{enableSubmissionForm:true, enctype:null, method:'post', multipartDetection:true, standardSubmit:false, submitOnAction:false, trackResetOnLoad:false}, getTemplate:function() {
   var template = this.callParent();
   template.push({tag:'input', type:'submit', cls:Ext.baseCSSPrefix + 'hidden-submit'});
@@ -69514,7 +69390,7 @@ Ext.define('App.profile.Phone', {extend:Ext.app.Profile, views:{main:'App.view.p
 Ext.define('App.view.tablet.main.Main', {extend:Ext.Panel, controller:'main', layout:'card', defaults:{header:{defaults:{ui:'flat large'}}}, lbar:{xtype:'mainmenu', reference:'mainmenu', ui:'dark micro', zIndex:4}});
 Ext.define('App.view.tablet.location.Browse', {extend:App.view.location.Browse, tbar:{xtype:'locationbrowsetoolbar'}, items:[{xtype:'grid', emptyText:'No location was found to match your search', bind:'{locations}', ui:'listing', plugins:[{type:'listswiper', right:[{iconCls:'x-fa fa-remove', commit:'onActionDelete', text:'Delete', ui:'action'}]}], selectable:{disabled:true}, columns:[{text:'Name', dataIndex:'name', flex:2}, {text:'Address', dataIndex:'address', flex:2, cell:{encodeHtml:false}, tpl:['\x3cdiv class\x3d"item-title"\x3e{city}, {country}\x3c/div\x3e', 
 '\x3cdiv class\x3d"item-caption"\x3e{address}\x3cdiv\x3e']}], listeners:{childtap:'onChildActivate'}}]});
-Ext.define('App.view.widgets.BrowseToolbar', {extend:Ext.Toolbar, xtype:'personbrowsetoolbar', cls:'browse-toolbar', weighted:true, ui:'tools', defaults:{ui:'action'}, items:{search:{xtype:'searchfield', reference:'search', placeholder:'Search', userCls:'expandable', bind:'{filters.search}', weight:0}, clear:{iconCls:'x-fa fa-undo', handler:'onClearFiltersTap', tooltip:'Clear Filters', weight:20}}});
+Ext.define('App.view.widgets.BrowseToolbar', {extend:Ext.Toolbar, xtype:'widgetbrowsetoolbar', cls:'browse-toolbar', weighted:true, ui:'tools', defaults:{ui:'action'}, items:{search:{xtype:'searchfield', reference:'search', placeholder:'Search', userCls:'expandable', bind:'{filters.search}', weight:0}, clear:{iconCls:'x-fa fa-undo', handler:'onClearFiltersTap', tooltip:'Clear Filters', weight:20}}});
 Ext.define('App.view.tablet.location.BrowseToolbar', {extend:App.view.widgets.BrowseToolbar, items:{create:{xtype:'button', iconCls:'x-fa fa-plus', handler:'onCreate', text:'Create', weight:50}}});
 Ext.define('App.profile.Tablet', {extend:Ext.app.Profile, views:{main:'App.view.tablet.main.Main', locationbrowse:'App.view.tablet.location.Browse', locationbrowsetoolbar:'App.view.tablet.location.BrowseToolbar'}, isActive:function() {
   return !Ext.platformTags.phone;
