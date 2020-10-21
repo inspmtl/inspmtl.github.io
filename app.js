@@ -68760,375 +68760,6 @@ Ext.define('Ext.state.Builder', {constructor:function(parent, name) {
   }
   return data;
 }}});
-Ext.define('Ext.tab.Tab', {extend:Ext.Button, xtype:'tab', alternateClassName:'Ext.Tab', isTab:true, config:{active:null, title:null, closable:null, tabPosition:'top', rotation:'default'}, standardizedRotationByValue:{0:'none', none:'none', 1:'right', right:'right', 2:'left', left:'left'}, defaultRotationForPosition:{top:'none', right:'right', bottom:'none', left:'left'}, rotationClass:{none:Ext.baseCSSPrefix + 'tab-rotate-none', right:Ext.baseCSSPrefix + 'tab-rotate-right', left:Ext.baseCSSPrefix + 
-'tab-rotate-left'}, iconAlignForRotation:{left:{left:Ext.baseCSSPrefix + 'icon-align-bottom', none:Ext.baseCSSPrefix + 'icon-align-left', right:Ext.baseCSSPrefix + 'icon-align-top'}, top:{left:Ext.baseCSSPrefix + 'icon-align-left', none:Ext.baseCSSPrefix + 'icon-align-top', right:Ext.baseCSSPrefix + 'icon-align-left'}, right:{left:Ext.baseCSSPrefix + 'icon-align-top', none:Ext.baseCSSPrefix + 'icon-align-right', right:Ext.baseCSSPrefix + 'icon-align-bottom'}, bottom:{left:Ext.baseCSSPrefix + 'icon-align-left', 
-none:Ext.baseCSSPrefix + 'icon-align-top', right:Ext.baseCSSPrefix + 'icon-align-left'}}, positionClass:{'top':Ext.baseCSSPrefix + 'tab-position-top', 'right':Ext.baseCSSPrefix + 'tab-position-right', 'bottom':Ext.baseCSSPrefix + 'tab-position-bottom', 'left':Ext.baseCSSPrefix + 'tab-position-left'}, applyRotation:function(rotation) {
-  return rotation || 'default';
-}, updateRotation:function(rotation) {
-  this.syncRotationAndPosition();
-}, updateTabPosition:function() {
-  this.syncRotationAndPosition();
-}, getActualRotation:function() {
-  var rotation = this.getRotation() || 'default';
-  rotation = rotation === 'default' ? this.defaultRotationForPosition[this.getTabPosition()] : rotation;
-  return this.standardizedRotationByValue[rotation];
-}, syncRotationAndPosition:function() {
-  var me = this, rotation = me.getActualRotation(), oldRotationCls = me._rotationCls, rotationCls = me._rotationCls = me.rotationClass[rotation], oldIconAlignCls = me._iconAlignCls || Ext.baseCSSPrefix + 'icon-align-' + me.getIconAlign(), iconAlignCls = me._iconAlignCls = me.iconAlignForRotation[me.getIconAlign()][rotation], oldPositionCls = me._positionCls, positionCls = me._positionCls = me.positionClass[me.getTabPosition()];
-  me.replaceCls(oldRotationCls, rotationCls);
-  me.replaceCls(oldIconAlignCls, iconAlignCls);
-  me.replaceCls(oldPositionCls, positionCls);
-}, pressedDelay:true, classCls:Ext.baseCSSPrefix + 'tab', activeCls:Ext.baseCSSPrefix + 'active', closableCls:Ext.baseCSSPrefix + 'closable', getTemplate:function() {
-  var template = this.callParent();
-  template.push({reference:'activeIndicatorElement', cls:Ext.baseCSSPrefix + 'active-indicator-el'}, {reference:'closeIconElement', cls:Ext.baseCSSPrefix + 'close-icon-el ' + Ext.baseCSSPrefix + 'font-icon ' + Ext.baseCSSPrefix + 'no-ripple', listeners:{click:'onClick'}});
-  return template;
-}, shouldRipple:function() {
-  return this.getRipple();
-}, onClick:function(e) {
-  var me = this, tabBar = me.tabBar;
-  if (e.currentTarget === me.closeIconElement.dom) {
-    if (tabBar && !me.getDisabled()) {
-      tabBar.closeTab(me);
-    }
-    e.stopPropagation();
-  } else {
-    return me.callParent([e]);
-  }
-}, updateTitle:function(title) {
-  this.setText(title);
-}, updateActive:function(active, oldActive) {
-  var me = this, el = me.el, activeCls = me.activeCls;
-  if (active && !oldActive) {
-    el.addCls(activeCls);
-    me.fireEvent('activate', me);
-  } else {
-    if (oldActive) {
-      el.removeCls(activeCls);
-      me.fireEvent('deactivate', me);
-    }
-  }
-}, updateClosable:function(closable) {
-  this.toggleCls(this.closableCls, !!closable);
-}, onAdded:function(parent, instanced) {
-  this.callParent([parent, instanced]);
-  this.tabBar = parent.isTabBar ? parent : null;
-}, onRemoved:function(destroying) {
-  this.callParent([destroying]);
-  this.tabBar = null;
-}}, function() {
-  this.override({activate:function() {
-    this.setActive(true);
-  }, deactivate:function() {
-    this.setActive(false);
-  }});
-});
-Ext.define('Ext.tab.Bar', {extend:Ext.Toolbar, alternateClassName:'Ext.TabBar', xtype:'tabbar', isTabBar:true, config:{defaultTabUI:null, animateIndicator:false, tabRotation:'default'}, defaultType:'tab', layout:{type:'hbox', align:'stretch'}, eventedConfig:{activeTab:null}, baseCls:Ext.baseCSSPrefix + 'tabbar', indicatorAnimationSpeed:150, initialize:function() {
-  var me = this;
-  me.callParent();
-  me.on({tap:'onTabTap', delegate:'\x3e tab', scope:me});
-}, getTemplate:function() {
-  var template = this.callParent();
-  template.push({reference:'stripElement', cls:Ext.baseCSSPrefix + 'strip-el'});
-  return template;
-}, onTabTap:function(tab) {
-  this.setActiveTab(tab);
-}, applyActiveTab:function(newActiveTab, oldActiveTab) {
-  var newTabInstance = this.parseActiveTab(newActiveTab);
-  if (!newActiveTab && newActiveTab !== 0) {
-    return;
-  }
-  if (!newTabInstance) {
-    if (oldActiveTab) {
-      Ext.Logger.warn('Trying to set a non-existent activeTab');
-    }
-    return;
-  }
-  return newTabInstance;
-}, updateTabRotation:function(rotation) {
-  var tabs = this.getTabs(), i;
-  for (i = 0; i < tabs.length; i++) {
-    tabs[i].setRotation(rotation);
-  }
-}, updateDocked:function(newDocked) {
-  var me = this, layout = me.getLayout(), initialConfig = me.getInitialConfig(), i, vertical, pack, tabs;
-  if (!initialConfig.layout || !initialConfig.layout.pack) {
-    pack = newDocked === 'bottom' ? 'center' : 'left';
-    if (layout.isLayout) {
-      layout.setPack(pack);
-    } else {
-      layout.pack = layout && layout.pack ? layout.pack : pack;
-    }
-  }
-  vertical = newDocked === 'right' || newDocked === 'left';
-  if (layout.getVertical() !== vertical) {
-    layout.setVertical(vertical);
-  }
-  tabs = this.getTabs();
-  for (i = 0; i < tabs.length; i++) {
-    tabs[i].setTabPosition(newDocked);
-  }
-  this.callParent(arguments);
-}, updateActiveTab:function(newTab, oldTab) {
-  var me = this, animateIndicator = this.getAnimateIndicator();
-  if (animateIndicator && newTab && oldTab && oldTab.parent) {
-    me.animateTabIndicator(newTab, oldTab);
-  } else {
-    if (newTab) {
-      newTab.setActive(true);
-    }
-    if (oldTab && oldTab.parent) {
-      oldTab.setActive(false);
-      this.previousTab = oldTab;
-    }
-  }
-}, updateAnimateIndicator:function() {
-  var me = this;
-  if (me.$animateIndicatorElement) {
-    me.$animateIndicatorElement.destroy();
-  }
-  if (me.$indicatorAnimationListeners) {
-    me.$indicatorAnimationListeners.destroy();
-  }
-  me.$indicatorAnimationListeners = me.$animateIndicatorElement = null;
-}, animateTabIndicator:function(newTab, oldTab) {
-  var me = this, newTabElement = newTab.element, oldTabElement = oldTab.element, oldIndicator = oldTab.activeIndicatorElement, newIndicator = newTab.activeIndicatorElement, oldIndicatorProps, newIndicatorProps, animateIndicatorElement, vertical, heightOrWidth, calcIndicatorProps, tabBarPosition = this.getDocked();
-  vertical = tabBarPosition === 'left' || tabBarPosition === 'right';
-  calcIndicatorProps = function(tabElement, indicator) {
-    var slideAnimObj = {width:indicator.getWidth(), height:indicator.getHeight(), x:indicator.getX(), y:tabElement.getY(), 'background-color':indicator.getStyle('background-color')};
-    if (!vertical) {
-      slideAnimObj.x = tabElement.getX();
-      slideAnimObj.y = indicator.getY();
-    }
-    return slideAnimObj;
-  };
-  oldIndicatorProps = calcIndicatorProps(oldTabElement, oldIndicator);
-  newIndicatorProps = calcIndicatorProps(newTabElement, oldIndicator);
-  newIndicator.hide();
-  newTab.setActive(true);
-  oldTab.setActive(false);
-  heightOrWidth = vertical ? 'width' : 'height';
-  if (oldIndicatorProps[heightOrWidth] || newIndicatorProps[heightOrWidth]) {
-    animateIndicatorElement = me.$animateIndicatorElement;
-    animateIndicatorElement = me.$animateIndicatorElement = me.element.insertFirst({cls:Ext.baseCSSPrefix + 'active-indicator-el'});
-    if (me.$indicatorAnimationListeners) {
-      me.$indicatorAnimationListeners.destroy();
-      me.$indicatorAnimationListeners = null;
-    }
-    me.$indicatorAnimation = animateIndicatorElement.animate({duration:me.indicatorAnimationSpeed, from:oldIndicatorProps, to:newIndicatorProps});
-    me.$indicatorAnimationListeners = me.$indicatorAnimation.on({destroyable:true, animationend:{fn:function() {
-      newIndicator.show();
-      animateIndicatorElement.hide();
-      animateIndicatorElement.destroy();
-      me.$indicatorAnimationListeners.destroy();
-      me.$indicatorAnimation = me.$indicatorAnimationListeners = null;
-    }, single:true}});
-  }
-}, getTabs:function() {
-  return this.query('\x3e tab');
-}, parseActiveTab:function(tab) {
-  if (typeof tab === 'number') {
-    return this.getTabs()[tab];
-  } else {
-    if (typeof tab === 'string') {
-      tab = this.getComponent(tab) || Ext.getCmp(tab);
-    }
-  }
-  return tab;
-}, onItemAdd:function(item, index) {
-  var me = this, defaultTabUI = me.getDefaultTabUI();
-  if (item.isTab) {
-    item.setRotation(me.getTabRotation());
-    item.setTabPosition(me.getDocked());
-    if (defaultTabUI && item.getUi() == null) {
-      item.setUi(defaultTabUI);
-    }
-  }
-  this.callParent([item, index]);
-}, privates:{findNextActivatableTab:function(tabToClose) {
-  var me = this, previousTab = me.previousTab, nextTab;
-  if (tabToClose.getActive() && me.getItems().getCount() > 1) {
-    if (previousTab && previousTab !== tabToClose && !previousTab.getDisabled()) {
-      nextTab = previousTab;
-    } else {
-      nextTab = tabToClose.next('tab:not([disabled\x3dtrue])') || tabToClose.prev('tab:not([disabled\x3dtrue])');
-    }
-  }
-  return nextTab || me.getActiveTab();
-}, closeTab:function(tab) {
-  var me = this, nextActivatableTab = me.findNextActivatableTab(tab), parent = me.parent;
-  if (parent && parent.isTabPanel) {
-    if (nextActivatableTab) {
-      parent.setActiveItem(nextActivatableTab.card);
-    }
-    parent.remove(tab.card);
-  } else {
-    if (nextActivatableTab) {
-      me.setActiveTab(nextActivatableTab);
-    }
-    me.remove(tab);
-  }
-}}});
-Ext.define('Ext.tab.Panel', {extend:Ext.Container, xtype:'tabpanel', alternateClassName:'Ext.TabPanel', isTabPanel:true, config:{autoOrientAnimation:null, tabBar:true, tabBarPosition:'top', tabRotation:'default', layout:{type:'card', animation:{type:'slide'}}, cls:Ext.baseCSSPrefix + 'tabpanel'}, defaults:{allowHeader:false}, initialize:function() {
-  var me = this;
-  me.callParent();
-  me.on({beforeactivetabchange:'doTabChange', delegate:'\x3e tabbar', scope:me});
-  me.on({disabledchange:'onItemDisabledChange', delegate:'\x3e component', scope:me});
-}, applyScrollable:function() {
-  return false;
-}, updateTabRotation:function(rotation) {
-  var bar = this.getTabBar();
-  if (bar) {
-    bar.setTabRotation(rotation);
-  }
-}, updateUi:function(ui, oldUi) {
-  var bar;
-  this.callParent([ui, oldUi]);
-  bar = this.getTabBar();
-  if (this.initialized && bar) {
-    bar.setUi(ui);
-  }
-}, updateActiveItem:function(newActiveItem, oldActiveItem) {
-  var items, oldIndex, newIndex, tabBar, oldTab, newTab;
-  if (!newActiveItem) {
-    return;
-  }
-  items = this.getInnerItems();
-  oldIndex = items.indexOf(oldActiveItem);
-  newIndex = items.indexOf(newActiveItem);
-  tabBar = this.getTabBar();
-  oldTab = tabBar.parseActiveTab(oldIndex);
-  newTab = tabBar.parseActiveTab(newIndex);
-  this.callParent(arguments);
-  if (newIndex !== -1) {
-    this.forcedChange = true;
-    tabBar.setActiveTab(newIndex);
-    this.forcedChange = false;
-    if (oldTab) {
-      oldTab.setActive(false);
-    }
-    if (newTab) {
-      newTab.setActive(true);
-    }
-  }
-}, doTabChange:function(tabBar, newTab) {
-  var oldActiveItem = this.getActiveItem(), newActiveItem;
-  this.setActiveItem(tabBar.indexOf(newTab));
-  newActiveItem = this.getActiveItem();
-  return this.forcedChange || oldActiveItem !== newActiveItem;
-}, applyTabBar:function(config) {
-  var innerItems, activeItem;
-  if (this.isConfiguring) {
-    activeItem = this.initialConfig.activeItem || 0;
-  } else {
-    innerItems = this.getInnerItems();
-    activeItem = innerItems.indexOf(this._activeItem);
-  }
-  if (config === true) {
-    config = {};
-  }
-  if (config) {
-    Ext.applyIf(config, {ui:this.getUi(), docked:this.getTabBarPosition(), activeItem:activeItem});
-    return Ext.factory(config, Ext.tab.Bar, this.getTabBar());
-  }
-  return null;
-}, updateTabBar:function(tabBar, oldTabBar) {
-  var me = this;
-  if (oldTabBar && me.removingTabBar === undefined) {
-    me.remove(oldTabBar, true);
-  }
-  if (tabBar) {
-    me.add(tabBar);
-    me.setTabBarPosition(tabBar.getDocked());
-  }
-}, doAutoOrientAnimation:function() {
-  var position = this.getTabBarPosition(), layout = this.getLayout(), direction = position === 'left' || position === 'right' ? 'top' : 'left';
-  layout.setAnimation({type:'slide', direction:direction});
-}, updateAutoOrientAnimation:function(value) {
-  var layout = this.getLayout(), initialLayout = this.getInitialConfig('layout');
-  if (value) {
-    this.doAutoOrientAnimation();
-  } else {
-    layout.setAnimation(initialLayout.animation);
-  }
-}, updateTabBarPosition:function(position) {
-  var tabBar = this.getTabBar(), autoOrientAnimation = this.getAutoOrientAnimation();
-  if (tabBar) {
-    tabBar.setDocked(position);
-    if (autoOrientAnimation) {
-      this.doAutoOrientAnimation();
-    }
-  }
-}, onItemAdd:function(card, itemIndex) {
-  var me = this;
-  if (!card.isInnerItem()) {
-    return me.callParent([card, itemIndex]);
-  }
-  var tabBar = me.getTabBar(), initialConfig = card.getInitialConfig(), tabConfig = initialConfig.tab || {}, tabTitle = card.getTitle ? card.getTitle() : initialConfig.title, tabClosable = card.getClosable ? card.getClosable() : initialConfig.closable, tabIconAlign = card.getIconAlign ? card.getIconAlign() : initialConfig.iconAlign, tabIconCls = card.getIconCls ? card.getIconCls() : initialConfig.iconCls, tabIcon = card.getIcon ? card.getIcon() : initialConfig.icon, tabHidden = card.getHidden ? card.getHidden() : 
-  initialConfig.hidden, tabDisabled = card.getDisabled ? card.getDisabled() : initialConfig.disabled, tabBadgeText = card.getBadgeText ? card.getBadgeText() : initialConfig.badgeText, innerItems = me.getInnerItems(), index = innerItems.indexOf(card), tabs = tabBar.query('\x3e tab'), activeTab = tabBar.getActiveTab(), currentTabInstance = tabs.length >= innerItems.length && tabs[index], header = card.getConfig('header', false, true), tabInstance;
-  if (tabTitle && !tabConfig.title) {
-    tabConfig.title = tabTitle;
-  }
-  if (tabClosable && !tabConfig.closable) {
-    tabConfig.closable = tabClosable;
-  }
-  if (tabIconAlign && !tabConfig.iconAlign) {
-    tabConfig.iconAlign = tabIconAlign;
-  }
-  if (tabIconCls && !tabConfig.iconCls) {
-    tabConfig.iconCls = tabIconCls;
-  }
-  if (tabIcon && !tabConfig.icon) {
-    tabConfig.icon = tabIcon;
-  }
-  if (tabHidden && !tabConfig.hidden) {
-    tabConfig.hidden = tabHidden;
-  }
-  if (tabDisabled && !tabConfig.disabled) {
-    tabConfig.disabled = tabDisabled;
-  }
-  if (tabBadgeText && !tabConfig.badgeText) {
-    tabConfig.badgeText = tabBadgeText;
-  }
-  if (!currentTabInstance && !tabConfig.title && !tabConfig.iconCls) {
-    if (!tabConfig.title && !tabConfig.iconCls) {
-      Ext.Logger.error('Adding a card to a tab container' + 'without specifying any tab configuration');
-    }
-  }
-  tabInstance = Ext.factory(tabConfig, Ext.tab.Tab, currentTabInstance);
-  if (!currentTabInstance) {
-    tabBar.insert(index, tabInstance);
-  }
-  card.tab = tabInstance;
-  tabInstance.card = card;
-  if (header) {
-    header.setHidden(true);
-  }
-  me.callParent([card, index]);
-  if (!activeTab && activeTab !== 0) {
-    tabBar.setActiveTab(tabInstance);
-  }
-}, onItemDisabledChange:function(item, newDisabled) {
-  if (item && item.tab) {
-    item.tab.setDisabled(newDisabled);
-  }
-}, onItemRemove:function(item, index, destroying) {
-  var me = this, meDestroying = me.destroying, clearBar, tabBar;
-  if (!meDestroying) {
-    tabBar = me.getTabBar();
-    if (item === tabBar) {
-      clearBar = me.removingTabBar === undefined;
-    } else {
-      if (tabBar) {
-        tabBar.remove(item.tab, true);
-      }
-    }
-  }
-  me.callParent([item, index, destroying]);
-  if (clearBar) {
-    me.removingTabBar = destroying;
-    me.setTabBar(null);
-    delete me.removingTabBar;
-  }
-}});
 Ext.define('Ext.tip.Manager', {config:{tooltip:{xtype:'tooltip', align:'', anchorToTarget:false, anchor:false, closeAction:'hide', quickShowInterval:0, maxWidth:'80vw'}, overflowTip:{align:'l-r?', anchor:true, showOnTap:true}}, interceptTitles:false, constructor:function(config) {
   var me = this, tip;
   me.initConfig(config);
@@ -69575,11 +69206,9 @@ Ext.define('App.view.location.BrowseController', {extend:App.view.widgets.Browse
 Ext.define('App.view.location.BrowseModel', {extend:Ext.app.ViewModel, alias:'viewmodel.locationbrowse', stores:{locations:{type:'locations', grouper:{groupFn:function(record) {
   return record.get('name')[0];
 }}}}});
-Ext.define('App.view.widgets.Show', {extend:Ext.Panel, controller:{type:'wizard'}, viewModel:{data:{record:null}}, eventedConfig:{record:null}, platformConfig:{phone:{header:{items:{edit:{xtype:'button', iconCls:'x-fa fa-pencil', handler:'onEditTap', weight:10}}}}, '!phone':{header:{hidden:true}}}, scrollable:{y:'scroll'}, weighted:true, defaults:{userCls:'page-constrained'}, items:{header:{xtype:'showheader', weight:-10}, content:{weighted:true, userCls:['page-constrained', 'blocks'], defaults:{userCls:'blocks-column', 
-weighted:true, defaults:{ui:'block'}}}}});
 Ext.define('App.view.widgets.Wizard', {extend:Ext.form.Panel, controller:{type:'wizard'}, config:{screens:[], toolbar:{xtype:'toolbar', weighted:true, ui:'tools', defaults:{ui:'flat'}, items:{prev:{reference:'prev', handler:'onPrevTap', iconCls:'x-fa fa-chevron-circle-left', weight:-20}, next:{reference:'next', handler:'onNextTap', iconCls:'x-fa fa-chevron-circle-right', weight:-10}}}}, platformConfig:{phone:{header:{items:{submit:{xtype:'button', handler:'onSubmitTap', iconCls:'x-fa fa-save', weight:10}}}, 
 toolbar:{docked:'bottom', layout:{pack:'end'}}}, '!phone':{header:{userCls:'page-constrained'}, toolbar:{userCls:'page-constrained', docked:'bottom', items:{spacer:{xtype:'spacer', weight:10}, submit:{reference:'submit', handler:'onTapSubmit', iconCls:'x-fa fa-save', weight:20, ui:'action', bind:{text:'{titles.save}'}}, 'delete':{bind:{hidden:'{record.phantom}'}, reference:'delete', handler:'onTapDelete', iconCls:'x-fa fa-remove', weight:40, ui:'action'}}}}}, modelValidation:true, layout:'fit', height:512, 
-width:512, items:[{xtype:'tabpanel', reference:'tabs', layout:{deferRender:false}, defaults:{userCls:'wizard-screen', scrollable:'y', padding:15, tab:{iconAlign:'top'}}, tabBar:{defaultTabUI:'flat', ui:'flat', layout:{pack:'center'}}, listeners:{add:'onScreenAdd', remove:'onScreenRemove', activeitemchange:'onScreenActivate'}}], initialize:function() {
+width:512, userCls:'page-constrained', items:[{xtype:'tabpanel', reference:'tabs', layout:{deferRender:false}, defaults:{userCls:'wizard-screen', scrollable:'y', padding:15, tab:{iconAlign:'top'}}, tabBar:{defaultTabUI:'flat', ui:'flat', layout:{pack:'center'}}, listeners:{add:'onScreenAdd', remove:'onScreenRemove', activeitemchange:'onScreenActivate'}}], initialize:function() {
   var me = this;
   me.callParent();
   me.add(me.getToolbar());
@@ -69593,12 +69222,13 @@ width:512, items:[{xtype:'tabpanel', reference:'tabs', layout:{deferRender:false
   this.getViewModel().set('record', record);
 }});
 Ext.define('App.view.widgets.comment.List', {extend:Ext.dataview.List, xtype:'widgetscommentlist', minHeight:80, margin:'0, 0, 0, 100', ui:'listing', store:'store.widgetcomments', plugins:[{type:'listswiper', right:[{iconCls:'x-fa fa-remove', commit:'onActionDelete', text:'Delete', ui:'action'}]}], itemTpl:['\x3cdiv class\x3d"item-details"\x3e', '\x3cdiv class\x3d"item-title"\x3e{Text}\x3c/div\x3e', '\x3c/div\x3e']});
-Ext.define('App.view.location.Wizard', {extend:App.view.widgets.Wizard, xtype:'locationwizard', controller:'locationwizard', screens:[{title:'Location', iconCls:'x-fa fa-info', defaults:{required:true}, items:[{xtype:'textfield', name:'name', bind:{label:'{fields.location.name}', bind:'{record.name}'}}, {xtype:'textfield', name:'address', bind:{label:'{fields.location.address}', bind:'{record.address}'}}, {xtype:'textfield', name:'city', bind:{label:'{fields.location.city}', bind:'{record.city}'}}, 
-{xtype:'textfield', name:'region', bind:{label:'{fields.location.region}', bind:'{record.region}'}}, {xtype:'textfield', name:'country', required:false, bind:{label:'{fields.location.country}', bind:'{record.country}'}}, {xtype:'textfield', name:'postcode', required:false, bind:{label:'{fields.location.postcode}', bind:'{record.postcode}'}}]}, {title:'Driveway', iconCls:'x-fa fa-car', items:[{xtype:'radiogroup', vertical:true, name:'countries', bind:{label:'{fields.driveway.driveway}'}, items:[{boxLabel:'Serviceable', 
-name:'driveway', inputValue:'1'}, {boxLabel:'Not Present', name:'driveway', inputValue:'0'}]}, {xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.driveway.material}', store:'{materials}'}}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'button', bind:{text:'{fields.comments}'}, handler:function(button) {
+Ext.define('App.view.location.Wizard', {extend:App.view.widgets.Wizard, xtype:['locationcreate', 'locationwizard'], controller:'locationwizard', viewModel:{type:'locationwizard'}, header:{bind:{title:'\x3ca target\x3d"_blank" href\x3d"http://maps.google.com/?q\x3d{record.address}, {record.city},{record.region},{record.country}"\x3e{record.name}\x3c/a\x3e'}}, screens:[{title:'Location', iconCls:'x-fa fa-info', defaults:{required:true}, items:[{xtype:'textfield', name:'name', bind:{label:'{fields.location.name}', 
+bind:'{record.name}'}}, {xtype:'textfield', name:'address', bind:{label:'{fields.location.address}', bind:'{record.address}'}}, {xtype:'textfield', name:'city', bind:{label:'{fields.location.city}', bind:'{record.city}'}}, {xtype:'textfield', name:'region', bind:{label:'{fields.location.region}', bind:'{record.region}'}}, {xtype:'textfield', name:'country', required:false, bind:{label:'{fields.location.country}', bind:'{record.country}'}}, {xtype:'textfield', name:'postcode', required:false, bind:{label:'{fields.location.postcode}', 
+bind:'{record.postcode}'}}]}, {title:'Driveway', iconCls:'x-fa fa-car', items:[{xtype:'radiogroup', vertical:true, name:'DW_Appearance', bind:{label:'{fields.driveway.driveway}'}, items:[{boxLabel:'Serviceable', name:'driveway', inputValue:'1'}, {boxLabel:'Not Present', name:'driveway', inputValue:'0'}]}, {xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.driveway.material}', store:'{materials}'}}, {xtype:'container', flex:1, margin:'10, 0, 0, 100', 
+layout:{type:'hbox'}, items:[{flex:1, xtype:'image', bind:{src:'{imgdriveway}'}}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3cdiv\x3e' + '\x3clabel for\x3d "imgdriveway" class\x3d "btn"\x3e\x3ci class\x3d"fa fa-camera fa-3x"\x3e\x3c/i\x3e\x3c/label\x3e' + '\x3cinput id\x3d"imgdriveway" type\x3d"file" accept\x3d"image/*" style\x3d"visibility:hidden;"\x3e' + '\x3c/div\x3e', listeners:{change:{fn:'onChangeFileInput', element:'element', selector:'div'}}}]}]}, 
+{xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3ci class\x3d"fa fa-comment fa-3x"\x3e\x3c/i\x3e', listeners:{click:{fn:function() {
   Ext.fireEvent('ontapcomment', 'commentsdriveway');
-}}]}, {xtype:'widgetscommentlist', reference:'commentdriveway', store:Ext.create('App.store.widget.Comments')}, {xtype:'container', flex:1, margin:'10, 0, 0, 100', layout:{type:'hbox'}, items:[{flex:1, xtype:'image', bind:{src:'{imgdriveway}'}}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3cdiv\x3e' + '\x3clabel for\x3d "imgdriveway" class\x3d "btn"\x3e\x3ci class\x3d"fa fa-camera fa-3x"\x3e\x3c/i\x3e\x3c/label\x3e' + '\x3cinput id\x3d"imgdriveway" type\x3d"file" accept\x3d"image/*" style\x3d"visibility:hidden;"\x3e' + 
-'\x3c/div\x3e', listeners:{change:{fn:'onChangeFileInput', element:'element', selector:'div'}}}]}]}]}]});
+}, element:'element', selector:'i'}}}]}, {xtype:'widgetscommentlist', reference:'commentdriveway', store:Ext.create('App.store.widget.Comments')}]}]});
 Ext.define('App.view.widgets.WizardController', {extend:Ext.app.ViewController, alias:'controller.wizard', listen:{global:{ontapcomment:'onTapComment', ontapcommentadd:'onTapCommentAdd'}}, onTapComment:function(area) {
   var me = this, store = me.getViewModel().getStore(area), menu = Ext.create('App.view.widgets.comment.Menu', {width:400, items:[{xtype:'widgetscommentgrid', store:store}]});
   Ext.Viewport.setMenu(menu, {side:'right'});
@@ -69706,31 +69336,7 @@ Ext.define('App.view.location.WizardController', {extend:App.view.widgets.Wizard
     console.log(e$36);
   }
 }});
-Ext.define('App.view.location.Show', {extend:App.view.widgets.Show, xtype:['locationshow', 'locationcreate', 'locationedit'], controller:'locationshow', viewModel:{type:'locationshow'}, items:{header:{items:{title:{tpl:['\x3cdiv class\x3d"icon x-fa fa-home"\x3e\x3c/div\x3e', '\x3cdiv class\x3d"name"\x3e{name}\x3c/div\x3e', '\x3cdiv class\x3d"desc"\x3e{city}, \x3cb\x3e{country}\x3c/b\x3e\x3cdiv\x3e']}}}, content:{items:{details:{xtype:'locationwizard'}}}}});
-Ext.define('App.view.widgets.ShowController', {extend:Ext.app.ViewController, alias:'controller.show', control:{'#':{recordchange:'onRecordChange'}}, getRecord:function() {
-  return this.getViewModel().get('record');
-}, onRecordChange:function(view, record) {
-  this.getViewModel().set('record', record);
-  if (!view.destroying && !view.destroyed) {
-    view.getScrollable().scrollTo(null, 0, true);
-  }
-}, onEditTap:function() {
-  this.redirectTo(this.getRecord().toEditUrl());
-}, onPeopleChildTap:function(view, location) {
-  var record = location.record;
-  if (record) {
-    this.redirectTo(record);
-  }
-}, onHistoryChildTap:function(view, location) {
-  var record = location.record;
-  if (record) {
-    this.redirectTo(record.getRecipient());
-  }
-}, onHistoryAllTap:function() {
-  this.redirectTo('history/recipient/' + this.getRecord().getId());
-}});
-Ext.define('App.view.location.ShowController', {extend:App.view.widgets.ShowController, alias:'controller.locationshow'});
-Ext.define('App.view.location.ShowModel', {extend:Ext.app.ViewModel, alias:'viewmodel.locationshow', data:{record:null}, stores:{materials:{autoLoad:true, type:'locationlovmaterials'}, commentsdriveway:{autoLoad:true, type:'locationlovcommentdriveway'}}});
+Ext.define('App.view.location.WizardModel', {extend:Ext.app.ViewModel, alias:'viewmodel.locationwizard', data:{test:'my test', record:null}, stores:{materials:{autoLoad:true, type:'locationlovmaterials'}, commentsdriveway:{autoLoad:true, type:'locationlovcommentdriveway'}}});
 Ext.define('App.view.main.MainController', {extend:Ext.app.ViewController, alias:'controller.main', routes:{':type(/:args)?':{action:'handleNavigationRoute', conditions:{':type':'(locations)', ':args':'(.*)'}}, ':type/:id(/:args)?':{action:'handleDataRoute', conditions:{':type':'(location)', ':id':'([a-f0-9-]{36}|create|edit|wizard)', ':args':'(.*)'}}}, listen:{global:{togglemainmenu:'onToggleMainMenu', navigationback:'onNavigationBack'}}, init:function(cmp) {
   var me = this, language = App.util.State.get('language');
   language = language === 'en' || language === 'fr' ? language : 'en';
@@ -69783,7 +69389,7 @@ Ext.define('App.view.main.MainController', {extend:Ext.app.ViewController, alias
       action = 'edit';
       args.shift();
     } else {
-      action = 'show';
+      action = 'wizard';
     }
   }
   xtype = type + action;
@@ -69874,6 +69480,30 @@ Ext.define('App.view.viewport.ViewportController', {extend:Ext.app.ViewControlle
   }
 }});
 Ext.define('App.view.viewport.ViewportModel', {extend:Ext.app.ViewModel, alias:'viewmodel.viewport', data:{user:null}});
+Ext.define('App.view.widgets.Show', {extend:Ext.Panel, controller:{type:'wizard'}, viewModel:{data:{record:null}}, eventedConfig:{record:null}, platformConfig:{phone:{header:{items:{edit:{xtype:'button', iconCls:'x-fa fa-pencil', handler:'onEditTap', weight:10}}}}, '!phone':{header:{hidden:true}}}, scrollable:{y:'scroll'}, weighted:true, defaults:{userCls:'page-constrained'}, items:{header:{xtype:'showheader', weight:-10}, content:{weighted:true, userCls:['page-constrained', 'blocks'], defaults:{userCls:'blocks-column', 
+weighted:true, defaults:{ui:'block'}}}}});
+Ext.define('App.view.widgets.ShowController', {extend:Ext.app.ViewController, alias:'controller.show', control:{'#':{recordchange:'onRecordChange'}}, getRecord:function() {
+  return this.getViewModel().get('record');
+}, onRecordChange:function(view, record) {
+  this.getViewModel().set('record', record);
+  if (!view.destroying && !view.destroyed) {
+    view.getScrollable().scrollTo(null, 0, true);
+  }
+}, onEditTap:function() {
+  this.redirectTo(this.getRecord().toEditUrl());
+}, onPeopleChildTap:function(view, location) {
+  var record = location.record;
+  if (record) {
+    this.redirectTo(record);
+  }
+}, onHistoryChildTap:function(view, location) {
+  var record = location.record;
+  if (record) {
+    this.redirectTo(record.getRecipient());
+  }
+}, onHistoryAllTap:function() {
+  this.redirectTo('history/recipient/' + this.getRecord().getId());
+}});
 Ext.define('App.view.widgets.ShowHeader', {extend:Ext.Container, xtype:'showheader', cls:'show-header', weighted:true, layout:{type:'hbox', align:'end'}, items:{title:{xtype:'component', userCls:'header-title', flex:1, bind:{record:'{record}'}}}});
 Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{rows:true, deselectable:true, checkbox:true, checkboxSelect:true, headerCheckbox:true, checkboxColumnIndex:0, mode:'multi', selection:{type:'records'}}, items:[{xtype:'toolbar', docked:'bottom', items:['-\x3e', {text:'Add selected comments', handler:function(button) {
   Ext.fireEvent('ontapcommentadd', button);
