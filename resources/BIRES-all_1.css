@@ -3537,6 +3537,93 @@ div.x-trigger.x-grouped {
     min-width: 100%;
     min-height: 100%;
 }
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:2 */
+.x-tab .x-active-indicator-el {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:13 */
+.x-tab.x-active .x-active-indicator-el {
+    display: block;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:17 */
+.x-tab .x-close-icon-el {
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    z-index: 4;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:26 */
+.x-tab.x-closable .x-close-icon-el {
+    display: flex;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:31 */
+.x-tab.x-tab-rotate-left .x-text-el {
+    -ms-writing-mode: tb-lr;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:38 */
+.x-tab.x-tab-rotate-left .x-icon-el {
+    transform: rotate(270deg);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:42 */
+.x-tab.x-tab-rotate-left .x-close-icon-el {
+    left: 0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:48 */
+.x-tab.x-tab-rotate-right .x-text-el {
+    -ms-writing-mode: tb-lr;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    margin-right: 8px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:55 */
+.x-tab.x-tab-rotate-right .x-icon-el {
+    transform: rotate(90deg);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:59 */
+.x-tab.x-tab-rotate-right .x-close-icon-el {
+    bottom: 0;
+    top: auto;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:66 */
+.x-tab.x-tab-position-left.x-active .x-active-indicator-el {
+    height: 100%;
+    right: 0;
+    left: inherit;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Tab.scss:74 */
+.x-tab.x-tab-position-right.x-active .x-active-indicator-el {
+    height: 100%;
+    left: 0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Bar.scss:1 */
+.x-tabbar-body-el {
+    overflow: visible;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Bar.scss:6 */
+.x-tabbar .x-strip-el {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/src/tab/Bar.scss:13 */
+.x-tabbar .x-active-indicator-el {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
 /* C:/inetpub/wwwroot/ext/packages/font-awesome/sass/etc/_animated.scss:4 */
 .fa-spin {
     animation: fa-spin 2s infinite linear;
@@ -14139,6 +14226,357 @@ div.x-trigger.x-grouped {
     height: 4px;
     min-width: 8px;
 }
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+.x-tab {
+    color: #f0f0f0;
+    font: 400 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1290 */
+.x-big .x-tab {
+    font-size: 14px;
+    line-height: 22px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+.x-tab .x-inner-el {
+    padding: 15px;
+    border-width: 0;
+    background-color: transparent;
+    background-image: none;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+.x-big .x-tab .x-inner-el {
+    padding: 10px 14px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+.x-tab.x-has-text .x-inner-el {
+    padding: 15px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+.x-big .x-tab.x-has-text .x-inner-el {
+    padding: 10px 14px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+.x-tab .x-icon-el {
+    color: #f0f0f0;
+    width: 16px;
+    height: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+.x-big .x-tab .x-icon-el {
+    width: 22px;
+    height: 22px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-tab .x-icon-el:before {
+    font-size: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-tab .x-icon-el:before {
+    font-size: 22px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1331 */
+.x-tab.x-has-text.x-icon-align-left .x-icon-el {
+    margin-right: 5px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1335 */
+.x-big .x-tab.x-has-text.x-icon-align-left .x-icon-el {
+    margin-right: 8px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1341 */
+.x-tab.x-has-text.x-icon-align-right .x-icon-el {
+    margin-left: 5px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1345 */
+.x-big .x-tab.x-has-text.x-icon-align-right .x-icon-el {
+    margin-left: 8px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1351 */
+.x-tab.x-has-text.x-icon-align-top .x-icon-el {
+    margin-bottom: 2px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1355 */
+.x-big .x-tab.x-has-text.x-icon-align-top .x-icon-el {
+    margin-bottom: 3px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1361 */
+.x-tab.x-has-text.x-icon-align-bottom .x-icon-el {
+    margin-top: 2px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1365 */
+.x-big .x-tab.x-has-text.x-icon-align-bottom .x-icon-el {
+    margin-top: 3px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+.x-tab .x-arrow-el {
+    color: #f0f0f0;
+    width: 16px;
+    height: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+.x-big .x-tab .x-arrow-el {
+    width: 22px;
+    height: 22px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-tab .x-arrow-el:before {
+    font-size: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-tab .x-arrow-el:before {
+    font-size: 22px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1382 */
+.x-tab.x-arrow-align-right .x-arrow-el {
+    margin-left: 5px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1386 */
+.x-big .x-tab.x-arrow-align-right .x-arrow-el {
+    margin-left: 8px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1402 */
+.x-tab .x-text-el {
+    min-height: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1408 */
+.x-big .x-tab .x-text-el {
+    min-height: 22px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1415 */
+.x-tab .x-badge-el {
+    color: #f0f0f0;
+    border-color: #742204;
+    border-radius: 0;
+    top: 0;
+    right: 0;
+    padding: 1px 4px;
+    max-width: 95%;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, sans-serif;
+    background-image: -webkit-linear-gradient(top, #ef4509, #bd3707 3%, #8c2905);
+    background-image: -moz-linear-gradient(top, #ef4509, #bd3707 3%, #8c2905);
+    background-image: -o-linear-gradient(top, #ef4509, #bd3707 3%, #8c2905);
+    background-image: -ms-linear-gradient(top, #ef4509, #bd3707 3%, #8c2905);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1429 */
+.x-big .x-tab .x-badge-el {
+    font-size: 13px;
+    line-height: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+.x-tab.x-hovered {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+.x-tab.x-hovered .x-inner-el {
+    background-color: rgba(0, 0, 0, 0.08);
+    background-image: none;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+.x-tab.x-hovered .x-icon-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+.x-tab.x-hovered .x-arrow-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+.x-tab.x-pressing,
+.x-tab.x-pressed {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+.x-tab.x-pressing .x-inner-el,
+.x-keyboard-mode .x-tab.x-pressing .x-inner-el,
+.x-tab.x-pressed .x-inner-el,
+.x-keyboard-mode .x-tab.x-pressed .x-inner-el {
+    background-color: rgba(0, 0, 0, 0.08);
+    background-image: none;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+.x-tab.x-pressing .x-icon-el,
+.x-tab.x-pressed .x-icon-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+.x-tab.x-pressing .x-arrow-el,
+.x-tab.x-pressed .x-arrow-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1493 */
+.x-keyboard-mode .x-tab.x-focused {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1502 */
+.x-keyboard-mode .x-tab.x-focused .x-icon-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1506 */
+.x-keyboard-mode .x-tab.x-focused .x-arrow-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+.x-keyboard-mode .x-tab.x-focused:after {
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    border: 1px solid rgba(240, 240, 240, 0.8);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1535 */
+.x-tab.x-disabled {
+    opacity: 0.5;
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1545 */
+.x-tab.x-disabled .x-icon-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1549 */
+.x-tab.x-disabled .x-arrow-el {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1442 */
+.x-tab .x-close-icon-el {
+    border-radius: 3px;
+    margin: 3px;
+    color: #f0f0f0;
+    width: 16px;
+    height: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+.x-big .x-tab .x-close-icon-el {
+    width: 20px;
+    height: 20px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+.x-tab .x-close-icon-el:before {
+    content: '\f00d';
+    font-size: 14px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+.x-big .x-tab .x-close-icon-el:before {
+    font-size: 20px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1463 */
+.x-tab .x-close-icon-el:hover {
+    color: rgba(240, 240, 240, 0.8);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1468 */
+.x-tab .x-close-icon-el:active {
+    color: rgba(240, 240, 240, 0.6);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1474 */
+.x-tab.x-active {
+    color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1478 */
+.x-tab.x-active .x-inner-el {
+    background-color: #fff;
+    background-image: none;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1483 */
+.x-tab.x-active .x-icon-el {
+    color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1487 */
+.x-tab.x-active .x-arrow-el {
+    color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1496 */
+.x-tab.x-active .x-close-icon-el {
+    color: #353535;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1500 */
+.x-tab.x-active .x-close-icon-el:hover {
+    color: rgba(53, 53, 53, 0.8);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1505 */
+.x-tab.x-active .x-close-icon-el:active {
+    color: rgba(53, 53, 53, 0.6);
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1512 */
+.x-tab.x-active.x-focused {
+    color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1521 */
+.x-tab.x-active.x-focused .x-icon-el {
+    color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1525 */
+.x-tab.x-active.x-focused .x-arrow-el {
+    color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1530 */
+.x-keyboard-mode .x-tab.x-active.x-focused:after {
+    border-color: #61c8cc;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1549 */
+.x-tab.x-closable .x-body-el {
+    margin-right: 15px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1553 */
+.x-big .x-tab.x-closable .x-body-el {
+    margin-right: 20px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1562 */
+.x-tab.x-tab-rotate-left .x-text-el {
+    margin-right: 4px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1568 */
+.x-tab.x-tab-position-left.x-active .x-active-indicator-el {
+    width: 4px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1574 */
+.x-tab.x-tab-position-right.x-active .x-active-indicator-el {
+    width: 4px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1581 */
+.x-tab.x-has-text.x-tab-rotate-left .x-inner-el,
+.x-tab.x-has-text.x-tab-rotate-right .x-inner-el {
+    padding: 8px 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1588 */
+.x-tab.x-has-text.x-tab-rotate-left .x-text-el,
+.x-tab.x-has-text.x-tab-rotate-right .x-text-el {
+    min-width: 16px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:330 */
+.x-tabbar {
+    background-color: #39babf;
+    background-image: none;
+    border-color: #39babf;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:344 */
+.x-tabbar .x-title {
+    color: #f0f0f0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:362 */
+.x-tabbar-body-el {
+    padding: 8px 8px 0;
+    min-height: 0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:367 */
+.x-big .x-tabbar-body-el {
+    padding: 12px 12px 0;
+    min-height: 0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:374 */
+.x-tabbar-body-el.x-horizontal > .x-component {
+    margin-right: 4px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:378 */
+.x-big .x-tabbar-body-el.x-horizontal > .x-component {
+    margin-right: 4px;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:383 */
+.x-tabbar-body-el.x-horizontal > .x-component:last-child {
+    margin-right: 0;
+}
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Bar.scss:335 */
+.x-strip-el {
+    background-color: #fff;
+}
 /* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/Button.scss:7 */
 .x-button .x-text-el .title {
     /**
@@ -14525,263 +14963,5 @@ div.x-trigger.x-grouped {
 }
 /* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
 .x-panel-dialog-boxscroller > .x-boxscroller-body > .x-body-el {
-    border: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
-.x-panelheader-dialog {
-    background-color: white;
-    background-image: none;
-    border-width: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:104 */
-.x-panelheader-dialog.x-docked-right {
-    border-width: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:118 */
-.x-panelheader-dialog.x-docked-left {
-    border-width: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:132 */
-.x-panelheader-dialog.x-docked-bottom {
-    border-width: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:117 */
-.x-paneltitle-dialog {
-    font-size: 18px;
-    line-height: 2;
-    padding: 16px 20px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:123 */
-.x-big .x-paneltitle-dialog {
-    padding: 20px 24px;
-    font-size: 18px;
-    line-height: 2;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:130 */
-.x-paneltitle-dialog .x-icon-el {
-    width: 24px;
-    height: 24px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
-.x-big .x-paneltitle-dialog .x-icon-el {
-    width: 24px;
-    height: 24px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
-.x-paneltitle-dialog .x-icon-el:before {
-    font-size: 24px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
-.x-big .x-paneltitle-dialog .x-icon-el:before {
-    font-size: 24px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:188 */
-.x-paneltitle-dialog.x-rotate-90 {
-    padding: 20px 16px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:192 */
-.x-big .x-paneltitle-dialog.x-rotate-90 {
-    padding: 24px 20px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:238 */
-.x-paneltitle-dialog.x-rotate-270 {
-    padding: 20px 16px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:242 */
-.x-big .x-paneltitle-dialog.x-rotate-270 {
-    padding: 24px 20px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:288 */
-.x-paneltitle-dialog.x-vertical .x-text-el {
-    width: 2;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:293 */
-.x-big .x-paneltitle-dialog.x-vertical .x-text-el {
-    width: 2;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:917 */
-.x-panel-invalid > .x-anchor-el {
-    margin: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
-.x-panel-invalid > .x-anchor-el .x-pointer-el {
-    fill: #d63e08;
-    stroke-width: 1px;
-    stroke: #d63e08;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:928 */
-.x-panel-invalid > .x-anchor-el.x-top {
-    width: 12px;
-    height: 8px;
-    top: -8px;
-    padding-bottom: 1px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:935 */
-.x-panel-invalid > .x-anchor-el.x-bottom {
-    width: 12px;
-    height: 8px;
-    bottom: -8px;
-    padding-top: 1px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:942 */
-.x-panel-invalid > .x-anchor-el.x-left {
-    height: 12px;
-    width: 8px;
-    left: -8px;
-    padding-right: 1px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:948 */
-.x-panel-invalid > .x-anchor-el.x-left .x-pointer-el {
-    transform-origin: 6px 6px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:953 */
-.x-panel-invalid > .x-anchor-el.x-right {
-    height: 12px;
-    width: 8px;
-    right: -8px;
-    padding-left: 1px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:959 */
-.x-panel-invalid > .x-anchor-el.x-right .x-pointer-el {
-    transform-origin: 4px 4px;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
-.x-panel-invalid-body-el {
-    background-color: #d63e08;
-    color: white;
-    border-width: 0;
-    border-style: none;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:984 */
-.x-panel-invalid-boxscroller {
-    border-width: 0;
-    border-style: none;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
-.x-panel-invalid-boxscroller > .x-boxscroller-body > .x-body-el {
-    border: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:2 */
-.x-panel-invalid-outer-border-l {
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:7 */
-.x-panel-invalid-outer-border-b {
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:12 */
-.x-panel-invalid-outer-border-bl {
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:27 */
-.x-panel-invalid-outer-border-r {
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:32 */
-.x-panel-invalid-outer-border-rl {
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:39 */
-.x-panel-invalid-outer-border-rb {
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:54 */
-.x-panel-invalid-outer-border-rbl {
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:71 */
-.x-panel-invalid-outer-border-t {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:76 */
-.x-panel-invalid-outer-border-tl {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:91 */
-.x-panel-invalid-outer-border-tb {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:98 */
-.x-panel-invalid-outer-border-tbl {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:115 */
-.x-panel-invalid-outer-border-tr {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:130 */
-.x-panel-invalid-outer-border-trl {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-    border-left-color: #d63e08 !important;
-    border-left-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:147 */
-.x-panel-invalid-outer-border-trb {
-    border-top-color: #d63e08 !important;
-    border-top-width: 1px !important;
-    border-right-color: #d63e08 !important;
-    border-right-width: 1px !important;
-    border-bottom-color: #d63e08 !important;
-    border-bottom-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:164 */
-.x-panel-invalid-outer-border-trbl {
-    border-color: #d63e08 !important;
-    border-width: 1px !important;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
-.x-panel-flat > .x-anchor-el .x-pointer-el {
-    fill: transparent;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
-.x-panel-flat-body-el {
-    background-color: transparent;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
-.x-panel-flat-boxscroller > .x-boxscroller-body > .x-body-el {
-    border: 0;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
-.x-panelheader-flat {
-    background-color: transparent;
-    background-image: none;
-}
-/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
-.x-panel-dark-boxscroller > .x-boxscroller-body > .x-body-el {
     border: 0;
 }

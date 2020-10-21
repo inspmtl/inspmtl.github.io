@@ -68760,6 +68760,375 @@ Ext.define('Ext.state.Builder', {constructor:function(parent, name) {
   }
   return data;
 }}});
+Ext.define('Ext.tab.Tab', {extend:Ext.Button, xtype:'tab', alternateClassName:'Ext.Tab', isTab:true, config:{active:null, title:null, closable:null, tabPosition:'top', rotation:'default'}, standardizedRotationByValue:{0:'none', none:'none', 1:'right', right:'right', 2:'left', left:'left'}, defaultRotationForPosition:{top:'none', right:'right', bottom:'none', left:'left'}, rotationClass:{none:Ext.baseCSSPrefix + 'tab-rotate-none', right:Ext.baseCSSPrefix + 'tab-rotate-right', left:Ext.baseCSSPrefix + 
+'tab-rotate-left'}, iconAlignForRotation:{left:{left:Ext.baseCSSPrefix + 'icon-align-bottom', none:Ext.baseCSSPrefix + 'icon-align-left', right:Ext.baseCSSPrefix + 'icon-align-top'}, top:{left:Ext.baseCSSPrefix + 'icon-align-left', none:Ext.baseCSSPrefix + 'icon-align-top', right:Ext.baseCSSPrefix + 'icon-align-left'}, right:{left:Ext.baseCSSPrefix + 'icon-align-top', none:Ext.baseCSSPrefix + 'icon-align-right', right:Ext.baseCSSPrefix + 'icon-align-bottom'}, bottom:{left:Ext.baseCSSPrefix + 'icon-align-left', 
+none:Ext.baseCSSPrefix + 'icon-align-top', right:Ext.baseCSSPrefix + 'icon-align-left'}}, positionClass:{'top':Ext.baseCSSPrefix + 'tab-position-top', 'right':Ext.baseCSSPrefix + 'tab-position-right', 'bottom':Ext.baseCSSPrefix + 'tab-position-bottom', 'left':Ext.baseCSSPrefix + 'tab-position-left'}, applyRotation:function(rotation) {
+  return rotation || 'default';
+}, updateRotation:function(rotation) {
+  this.syncRotationAndPosition();
+}, updateTabPosition:function() {
+  this.syncRotationAndPosition();
+}, getActualRotation:function() {
+  var rotation = this.getRotation() || 'default';
+  rotation = rotation === 'default' ? this.defaultRotationForPosition[this.getTabPosition()] : rotation;
+  return this.standardizedRotationByValue[rotation];
+}, syncRotationAndPosition:function() {
+  var me = this, rotation = me.getActualRotation(), oldRotationCls = me._rotationCls, rotationCls = me._rotationCls = me.rotationClass[rotation], oldIconAlignCls = me._iconAlignCls || Ext.baseCSSPrefix + 'icon-align-' + me.getIconAlign(), iconAlignCls = me._iconAlignCls = me.iconAlignForRotation[me.getIconAlign()][rotation], oldPositionCls = me._positionCls, positionCls = me._positionCls = me.positionClass[me.getTabPosition()];
+  me.replaceCls(oldRotationCls, rotationCls);
+  me.replaceCls(oldIconAlignCls, iconAlignCls);
+  me.replaceCls(oldPositionCls, positionCls);
+}, pressedDelay:true, classCls:Ext.baseCSSPrefix + 'tab', activeCls:Ext.baseCSSPrefix + 'active', closableCls:Ext.baseCSSPrefix + 'closable', getTemplate:function() {
+  var template = this.callParent();
+  template.push({reference:'activeIndicatorElement', cls:Ext.baseCSSPrefix + 'active-indicator-el'}, {reference:'closeIconElement', cls:Ext.baseCSSPrefix + 'close-icon-el ' + Ext.baseCSSPrefix + 'font-icon ' + Ext.baseCSSPrefix + 'no-ripple', listeners:{click:'onClick'}});
+  return template;
+}, shouldRipple:function() {
+  return this.getRipple();
+}, onClick:function(e) {
+  var me = this, tabBar = me.tabBar;
+  if (e.currentTarget === me.closeIconElement.dom) {
+    if (tabBar && !me.getDisabled()) {
+      tabBar.closeTab(me);
+    }
+    e.stopPropagation();
+  } else {
+    return me.callParent([e]);
+  }
+}, updateTitle:function(title) {
+  this.setText(title);
+}, updateActive:function(active, oldActive) {
+  var me = this, el = me.el, activeCls = me.activeCls;
+  if (active && !oldActive) {
+    el.addCls(activeCls);
+    me.fireEvent('activate', me);
+  } else {
+    if (oldActive) {
+      el.removeCls(activeCls);
+      me.fireEvent('deactivate', me);
+    }
+  }
+}, updateClosable:function(closable) {
+  this.toggleCls(this.closableCls, !!closable);
+}, onAdded:function(parent, instanced) {
+  this.callParent([parent, instanced]);
+  this.tabBar = parent.isTabBar ? parent : null;
+}, onRemoved:function(destroying) {
+  this.callParent([destroying]);
+  this.tabBar = null;
+}}, function() {
+  this.override({activate:function() {
+    this.setActive(true);
+  }, deactivate:function() {
+    this.setActive(false);
+  }});
+});
+Ext.define('Ext.tab.Bar', {extend:Ext.Toolbar, alternateClassName:'Ext.TabBar', xtype:'tabbar', isTabBar:true, config:{defaultTabUI:null, animateIndicator:false, tabRotation:'default'}, defaultType:'tab', layout:{type:'hbox', align:'stretch'}, eventedConfig:{activeTab:null}, baseCls:Ext.baseCSSPrefix + 'tabbar', indicatorAnimationSpeed:150, initialize:function() {
+  var me = this;
+  me.callParent();
+  me.on({tap:'onTabTap', delegate:'\x3e tab', scope:me});
+}, getTemplate:function() {
+  var template = this.callParent();
+  template.push({reference:'stripElement', cls:Ext.baseCSSPrefix + 'strip-el'});
+  return template;
+}, onTabTap:function(tab) {
+  this.setActiveTab(tab);
+}, applyActiveTab:function(newActiveTab, oldActiveTab) {
+  var newTabInstance = this.parseActiveTab(newActiveTab);
+  if (!newActiveTab && newActiveTab !== 0) {
+    return;
+  }
+  if (!newTabInstance) {
+    if (oldActiveTab) {
+      Ext.Logger.warn('Trying to set a non-existent activeTab');
+    }
+    return;
+  }
+  return newTabInstance;
+}, updateTabRotation:function(rotation) {
+  var tabs = this.getTabs(), i;
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].setRotation(rotation);
+  }
+}, updateDocked:function(newDocked) {
+  var me = this, layout = me.getLayout(), initialConfig = me.getInitialConfig(), i, vertical, pack, tabs;
+  if (!initialConfig.layout || !initialConfig.layout.pack) {
+    pack = newDocked === 'bottom' ? 'center' : 'left';
+    if (layout.isLayout) {
+      layout.setPack(pack);
+    } else {
+      layout.pack = layout && layout.pack ? layout.pack : pack;
+    }
+  }
+  vertical = newDocked === 'right' || newDocked === 'left';
+  if (layout.getVertical() !== vertical) {
+    layout.setVertical(vertical);
+  }
+  tabs = this.getTabs();
+  for (i = 0; i < tabs.length; i++) {
+    tabs[i].setTabPosition(newDocked);
+  }
+  this.callParent(arguments);
+}, updateActiveTab:function(newTab, oldTab) {
+  var me = this, animateIndicator = this.getAnimateIndicator();
+  if (animateIndicator && newTab && oldTab && oldTab.parent) {
+    me.animateTabIndicator(newTab, oldTab);
+  } else {
+    if (newTab) {
+      newTab.setActive(true);
+    }
+    if (oldTab && oldTab.parent) {
+      oldTab.setActive(false);
+      this.previousTab = oldTab;
+    }
+  }
+}, updateAnimateIndicator:function() {
+  var me = this;
+  if (me.$animateIndicatorElement) {
+    me.$animateIndicatorElement.destroy();
+  }
+  if (me.$indicatorAnimationListeners) {
+    me.$indicatorAnimationListeners.destroy();
+  }
+  me.$indicatorAnimationListeners = me.$animateIndicatorElement = null;
+}, animateTabIndicator:function(newTab, oldTab) {
+  var me = this, newTabElement = newTab.element, oldTabElement = oldTab.element, oldIndicator = oldTab.activeIndicatorElement, newIndicator = newTab.activeIndicatorElement, oldIndicatorProps, newIndicatorProps, animateIndicatorElement, vertical, heightOrWidth, calcIndicatorProps, tabBarPosition = this.getDocked();
+  vertical = tabBarPosition === 'left' || tabBarPosition === 'right';
+  calcIndicatorProps = function(tabElement, indicator) {
+    var slideAnimObj = {width:indicator.getWidth(), height:indicator.getHeight(), x:indicator.getX(), y:tabElement.getY(), 'background-color':indicator.getStyle('background-color')};
+    if (!vertical) {
+      slideAnimObj.x = tabElement.getX();
+      slideAnimObj.y = indicator.getY();
+    }
+    return slideAnimObj;
+  };
+  oldIndicatorProps = calcIndicatorProps(oldTabElement, oldIndicator);
+  newIndicatorProps = calcIndicatorProps(newTabElement, oldIndicator);
+  newIndicator.hide();
+  newTab.setActive(true);
+  oldTab.setActive(false);
+  heightOrWidth = vertical ? 'width' : 'height';
+  if (oldIndicatorProps[heightOrWidth] || newIndicatorProps[heightOrWidth]) {
+    animateIndicatorElement = me.$animateIndicatorElement;
+    animateIndicatorElement = me.$animateIndicatorElement = me.element.insertFirst({cls:Ext.baseCSSPrefix + 'active-indicator-el'});
+    if (me.$indicatorAnimationListeners) {
+      me.$indicatorAnimationListeners.destroy();
+      me.$indicatorAnimationListeners = null;
+    }
+    me.$indicatorAnimation = animateIndicatorElement.animate({duration:me.indicatorAnimationSpeed, from:oldIndicatorProps, to:newIndicatorProps});
+    me.$indicatorAnimationListeners = me.$indicatorAnimation.on({destroyable:true, animationend:{fn:function() {
+      newIndicator.show();
+      animateIndicatorElement.hide();
+      animateIndicatorElement.destroy();
+      me.$indicatorAnimationListeners.destroy();
+      me.$indicatorAnimation = me.$indicatorAnimationListeners = null;
+    }, single:true}});
+  }
+}, getTabs:function() {
+  return this.query('\x3e tab');
+}, parseActiveTab:function(tab) {
+  if (typeof tab === 'number') {
+    return this.getTabs()[tab];
+  } else {
+    if (typeof tab === 'string') {
+      tab = this.getComponent(tab) || Ext.getCmp(tab);
+    }
+  }
+  return tab;
+}, onItemAdd:function(item, index) {
+  var me = this, defaultTabUI = me.getDefaultTabUI();
+  if (item.isTab) {
+    item.setRotation(me.getTabRotation());
+    item.setTabPosition(me.getDocked());
+    if (defaultTabUI && item.getUi() == null) {
+      item.setUi(defaultTabUI);
+    }
+  }
+  this.callParent([item, index]);
+}, privates:{findNextActivatableTab:function(tabToClose) {
+  var me = this, previousTab = me.previousTab, nextTab;
+  if (tabToClose.getActive() && me.getItems().getCount() > 1) {
+    if (previousTab && previousTab !== tabToClose && !previousTab.getDisabled()) {
+      nextTab = previousTab;
+    } else {
+      nextTab = tabToClose.next('tab:not([disabled\x3dtrue])') || tabToClose.prev('tab:not([disabled\x3dtrue])');
+    }
+  }
+  return nextTab || me.getActiveTab();
+}, closeTab:function(tab) {
+  var me = this, nextActivatableTab = me.findNextActivatableTab(tab), parent = me.parent;
+  if (parent && parent.isTabPanel) {
+    if (nextActivatableTab) {
+      parent.setActiveItem(nextActivatableTab.card);
+    }
+    parent.remove(tab.card);
+  } else {
+    if (nextActivatableTab) {
+      me.setActiveTab(nextActivatableTab);
+    }
+    me.remove(tab);
+  }
+}}});
+Ext.define('Ext.tab.Panel', {extend:Ext.Container, xtype:'tabpanel', alternateClassName:'Ext.TabPanel', isTabPanel:true, config:{autoOrientAnimation:null, tabBar:true, tabBarPosition:'top', tabRotation:'default', layout:{type:'card', animation:{type:'slide'}}, cls:Ext.baseCSSPrefix + 'tabpanel'}, defaults:{allowHeader:false}, initialize:function() {
+  var me = this;
+  me.callParent();
+  me.on({beforeactivetabchange:'doTabChange', delegate:'\x3e tabbar', scope:me});
+  me.on({disabledchange:'onItemDisabledChange', delegate:'\x3e component', scope:me});
+}, applyScrollable:function() {
+  return false;
+}, updateTabRotation:function(rotation) {
+  var bar = this.getTabBar();
+  if (bar) {
+    bar.setTabRotation(rotation);
+  }
+}, updateUi:function(ui, oldUi) {
+  var bar;
+  this.callParent([ui, oldUi]);
+  bar = this.getTabBar();
+  if (this.initialized && bar) {
+    bar.setUi(ui);
+  }
+}, updateActiveItem:function(newActiveItem, oldActiveItem) {
+  var items, oldIndex, newIndex, tabBar, oldTab, newTab;
+  if (!newActiveItem) {
+    return;
+  }
+  items = this.getInnerItems();
+  oldIndex = items.indexOf(oldActiveItem);
+  newIndex = items.indexOf(newActiveItem);
+  tabBar = this.getTabBar();
+  oldTab = tabBar.parseActiveTab(oldIndex);
+  newTab = tabBar.parseActiveTab(newIndex);
+  this.callParent(arguments);
+  if (newIndex !== -1) {
+    this.forcedChange = true;
+    tabBar.setActiveTab(newIndex);
+    this.forcedChange = false;
+    if (oldTab) {
+      oldTab.setActive(false);
+    }
+    if (newTab) {
+      newTab.setActive(true);
+    }
+  }
+}, doTabChange:function(tabBar, newTab) {
+  var oldActiveItem = this.getActiveItem(), newActiveItem;
+  this.setActiveItem(tabBar.indexOf(newTab));
+  newActiveItem = this.getActiveItem();
+  return this.forcedChange || oldActiveItem !== newActiveItem;
+}, applyTabBar:function(config) {
+  var innerItems, activeItem;
+  if (this.isConfiguring) {
+    activeItem = this.initialConfig.activeItem || 0;
+  } else {
+    innerItems = this.getInnerItems();
+    activeItem = innerItems.indexOf(this._activeItem);
+  }
+  if (config === true) {
+    config = {};
+  }
+  if (config) {
+    Ext.applyIf(config, {ui:this.getUi(), docked:this.getTabBarPosition(), activeItem:activeItem});
+    return Ext.factory(config, Ext.tab.Bar, this.getTabBar());
+  }
+  return null;
+}, updateTabBar:function(tabBar, oldTabBar) {
+  var me = this;
+  if (oldTabBar && me.removingTabBar === undefined) {
+    me.remove(oldTabBar, true);
+  }
+  if (tabBar) {
+    me.add(tabBar);
+    me.setTabBarPosition(tabBar.getDocked());
+  }
+}, doAutoOrientAnimation:function() {
+  var position = this.getTabBarPosition(), layout = this.getLayout(), direction = position === 'left' || position === 'right' ? 'top' : 'left';
+  layout.setAnimation({type:'slide', direction:direction});
+}, updateAutoOrientAnimation:function(value) {
+  var layout = this.getLayout(), initialLayout = this.getInitialConfig('layout');
+  if (value) {
+    this.doAutoOrientAnimation();
+  } else {
+    layout.setAnimation(initialLayout.animation);
+  }
+}, updateTabBarPosition:function(position) {
+  var tabBar = this.getTabBar(), autoOrientAnimation = this.getAutoOrientAnimation();
+  if (tabBar) {
+    tabBar.setDocked(position);
+    if (autoOrientAnimation) {
+      this.doAutoOrientAnimation();
+    }
+  }
+}, onItemAdd:function(card, itemIndex) {
+  var me = this;
+  if (!card.isInnerItem()) {
+    return me.callParent([card, itemIndex]);
+  }
+  var tabBar = me.getTabBar(), initialConfig = card.getInitialConfig(), tabConfig = initialConfig.tab || {}, tabTitle = card.getTitle ? card.getTitle() : initialConfig.title, tabClosable = card.getClosable ? card.getClosable() : initialConfig.closable, tabIconAlign = card.getIconAlign ? card.getIconAlign() : initialConfig.iconAlign, tabIconCls = card.getIconCls ? card.getIconCls() : initialConfig.iconCls, tabIcon = card.getIcon ? card.getIcon() : initialConfig.icon, tabHidden = card.getHidden ? card.getHidden() : 
+  initialConfig.hidden, tabDisabled = card.getDisabled ? card.getDisabled() : initialConfig.disabled, tabBadgeText = card.getBadgeText ? card.getBadgeText() : initialConfig.badgeText, innerItems = me.getInnerItems(), index = innerItems.indexOf(card), tabs = tabBar.query('\x3e tab'), activeTab = tabBar.getActiveTab(), currentTabInstance = tabs.length >= innerItems.length && tabs[index], header = card.getConfig('header', false, true), tabInstance;
+  if (tabTitle && !tabConfig.title) {
+    tabConfig.title = tabTitle;
+  }
+  if (tabClosable && !tabConfig.closable) {
+    tabConfig.closable = tabClosable;
+  }
+  if (tabIconAlign && !tabConfig.iconAlign) {
+    tabConfig.iconAlign = tabIconAlign;
+  }
+  if (tabIconCls && !tabConfig.iconCls) {
+    tabConfig.iconCls = tabIconCls;
+  }
+  if (tabIcon && !tabConfig.icon) {
+    tabConfig.icon = tabIcon;
+  }
+  if (tabHidden && !tabConfig.hidden) {
+    tabConfig.hidden = tabHidden;
+  }
+  if (tabDisabled && !tabConfig.disabled) {
+    tabConfig.disabled = tabDisabled;
+  }
+  if (tabBadgeText && !tabConfig.badgeText) {
+    tabConfig.badgeText = tabBadgeText;
+  }
+  if (!currentTabInstance && !tabConfig.title && !tabConfig.iconCls) {
+    if (!tabConfig.title && !tabConfig.iconCls) {
+      Ext.Logger.error('Adding a card to a tab container' + 'without specifying any tab configuration');
+    }
+  }
+  tabInstance = Ext.factory(tabConfig, Ext.tab.Tab, currentTabInstance);
+  if (!currentTabInstance) {
+    tabBar.insert(index, tabInstance);
+  }
+  card.tab = tabInstance;
+  tabInstance.card = card;
+  if (header) {
+    header.setHidden(true);
+  }
+  me.callParent([card, index]);
+  if (!activeTab && activeTab !== 0) {
+    tabBar.setActiveTab(tabInstance);
+  }
+}, onItemDisabledChange:function(item, newDisabled) {
+  if (item && item.tab) {
+    item.tab.setDisabled(newDisabled);
+  }
+}, onItemRemove:function(item, index, destroying) {
+  var me = this, meDestroying = me.destroying, clearBar, tabBar;
+  if (!meDestroying) {
+    tabBar = me.getTabBar();
+    if (item === tabBar) {
+      clearBar = me.removingTabBar === undefined;
+    } else {
+      if (tabBar) {
+        tabBar.remove(item.tab, true);
+      }
+    }
+  }
+  me.callParent([item, index, destroying]);
+  if (clearBar) {
+    me.removingTabBar = destroying;
+    me.setTabBar(null);
+    delete me.removingTabBar;
+  }
+}});
 Ext.define('Ext.tip.Manager', {config:{tooltip:{xtype:'tooltip', align:'', anchorToTarget:false, anchor:false, closeAction:'hide', quickShowInterval:0, maxWidth:'80vw'}, overflowTip:{align:'l-r?', anchor:true, showOnTap:true}}, interceptTitles:false, constructor:function(config) {
   var me = this, tip;
   me.initConfig(config);
