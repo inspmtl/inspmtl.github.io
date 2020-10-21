@@ -69398,9 +69398,9 @@ Ext.define('App.profile.Tablet', {extend:Ext.app.Profile, views:{main:'App.view.
   Ext.getBody().addCls('tablet-profile');
 }});
 Ext.define('App.store.Location.locations', {extend:Ext.data.Store, alias:'store.locations', model:'App.model.location.Location', sorters:'name', proxy:{type:'ajax', url:'resources/data/location/locations.json', reader:{type:'json', rootProperty:'d'}}});
-Ext.define('App.store.Location.lov.comment.Driveway', {extend:Ext.data.Store, alias:'store.locationlovcommentdriveway', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/comment/Driveway.json', reader:{type:'json', rootProperty:'d'}}});
+Ext.define('App.store.Location.lov.comment.Driveway', {extend:Ext.data.Store, alias:'store.locationlovcommentdriveway', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/comment/driveway.json', reader:{type:'json', rootProperty:'d'}}});
 Ext.define('App.store.Menu', {extend:Ext.data.Store, alias:'store.menu', data:[{id:'locations', xtype:'locationbrowse', text:'Locations', icon:'home'}]});
-Ext.define('App.store.location.lov.Materials', {extend:Ext.data.Store, alias:'store.locationlovmaterials', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/Materials.json', reader:{type:'json', rootProperty:'d'}}});
+Ext.define('App.store.location.lov.Materials', {extend:Ext.data.Store, alias:'store.locationlovmaterials', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/materials.json', reader:{type:'json', rootProperty:'d'}}});
 Ext.define('App.store.widget.Comments', {extend:Ext.data.Store, alias:'store.widgetcomments', proxy:{type:'memory'}});
 Ext.define('App.util.Errors', {statics:{toForm:function(errors) {
   var values = {};
