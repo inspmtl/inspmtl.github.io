@@ -69403,7 +69403,7 @@ Ext.define('App.store.Location.lov.comment.Driveway', {extend:Ext.data.Store, al
 Ext.define('App.store.Location.lov.comment.Siding', {extend:Ext.data.Store, alias:'store.locationlovcommentsiding', model:'App.model.lov.LOV', sorters:[{property:'Text', direction:'ASC'}], proxy:{type:'ajax', url:'resources/data/location/lov/comment/siding.json', reader:{type:'json', rootProperty:'d'}}});
 Ext.define('App.store.Menu', {extend:Ext.data.Store, alias:'store.menu', data:[{id:'locations', xtype:'locationbrowse', text:'Locations', icon:'home'}]});
 Ext.define('App.store.location.lov.Materials', {extend:Ext.data.Store, alias:'store.locationlovmaterials', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/materials.json', reader:{type:'json', rootProperty:'d'}}});
-Ext.define('App.store.widget.Comments', {extend:Ext.data.Store, alias:'store.widgetcomments', model:'App.model.lov.LOV', proxy:{type:'memory'}});
+Ext.define('App.store.widget.Comments', {extend:Ext.data.Store, alias:'store.widgetcomments', model:'App.model.lov.LOV', sorters:[{property:'Text', direction:'ASC'}], proxy:{type:'memory'}});
 Ext.define('App.util.Errors', {statics:{toForm:function(errors) {
   var values = {};
   if (Ext.isObject(errors)) {
