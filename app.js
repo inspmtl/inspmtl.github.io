@@ -69590,7 +69590,7 @@ width:512, userCls:'page-constrained', items:[{xtype:'tabpanel', reference:'tabs
 }, setRecord:function(record) {
   this.getViewModel().set('record', record);
 }});
-Ext.define('App.view.widgets.comment.List', {extend:Ext.dataview.List, xtype:'widgetscommentlist', minHeight:80, margin:'0, 0, 0, 100', ui:'listing', store:'store.widgetcomments', plugins:[{type:'listswiper', right:[{iconCls:'x-fa fa-remove', commit:'onActionDelete', text:'Delete', ui:'action'}]}], itemTpl:['\x3cdiv class\x3d"item-details"\x3e', '\x3cdiv class\x3d"item-title"\x3e{Text}\x3c/div\x3e', '\x3c/div\x3e']});
+Ext.define('App.view.widgets.comment.List', {extend:Ext.dataview.List, xtype:'widgetscommentlist', minHeight:80, ui:'listing', store:'store.widgetcomments', plugins:[{type:'listswiper', right:[{iconCls:'x-fa fa-remove', commit:'onActionDelete', text:'Delete', ui:'action'}]}], itemTpl:['\x3cdiv class\x3d"item-details"\x3e', '\x3cdiv class\x3d"item-title"\x3e{Text}\x3c/div\x3e', '\x3c/div\x3e']});
 Ext.define('App.view.location.Wizard', {extend:App.view.widgets.Wizard, xtype:['locationcreate', 'locationwizard'], controller:'locationwizard', viewModel:{type:'locationwizard'}, header:{bind:{title:'\x3ca target\x3d"_blank" href\x3d"http://maps.google.com/?q\x3d{record.address}, {record.city},{record.region},{record.country}"\x3e{record.name}\x3c/a\x3e'}}, screens:[{title:'Location', iconCls:'x-fa fa-info', defaults:{required:true}, items:[{xtype:'textfield', name:'name', bind:{label:'{fields.location.name}', 
 bind:'{record.name}'}}, {xtype:'textfield', name:'address', bind:{label:'{fields.location.address}', bind:'{record.address}'}}, {xtype:'textfield', name:'city', bind:{label:'{fields.location.city}', bind:'{record.city}'}}, {xtype:'textfield', name:'region', bind:{label:'{fields.location.region}', bind:'{record.region}'}}, {xtype:'textfield', name:'country', required:false, bind:{label:'{fields.location.country}', bind:'{record.country}'}}, {xtype:'textfield', name:'postcode', required:false, bind:{label:'{fields.location.postcode}', 
 bind:'{record.postcode}'}}]}, {title:'Driveway', iconCls:'x-fa fa-car', items:[{xtype:'radiogroup', vertical:true, name:'DW_Appearance', bind:{label:'{fields.driveway.driveway}'}, items:[{boxLabel:'Serviceable', name:'driveway', inputValue:'1'}, {boxLabel:'Not Present', name:'driveway', inputValue:'0'}]}, {xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.driveway.material}', store:'{materials}'}}, {xtype:'container', flex:1, margin:'10, 0, 0, 100', 
@@ -69598,23 +69598,22 @@ layout:{type:'hbox'}, items:[{flex:1, xtype:'image', bind:{src:'{imgdriveway}'}}
 {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3ci class\x3d"fa fa-comment fa-3x"\x3e\x3c/i\x3e', listeners:{click:{fn:function() {
   Ext.fireEvent('ontapcomment', 'commentsdriveway');
 }, element:'element', selector:'i'}}}]}, {xtype:'widgetscommentlist', reference:'commentdriveway', store:Ext.create('App.store.widget.Comments')}]}]});
-Ext.define('App.view.widgets.WizardController', {extend:Ext.app.ViewController, alias:'controller.wizard', listen:{global:{ontapcomment:'onTapComment', ontapcommentadd:'onTapCommentAdd'}}, onTapComment:function(area) {
-  var me = this, store = me.getViewModel().getStore(area), menu = Ext.create('App.view.widgets.comment.Menu', {width:400, items:[{xtype:'widgetscommentgrid', store:store}]});
-  Ext.Viewport.setMenu(menu, {side:'right'});
-  Ext.Viewport.showMenu('right');
-}, onActionDelete:function(list, data) {
+Ext.define('App.view.widgets.WizardController', {extend:Ext.app.ViewController, alias:'controller.wizard', listen:{global:{ontapcomment:'onTapComment', ontapcommentadd:'onTapCommentAdd'}}, onActionDelete:function(list, data) {
   var me = this, store = list.getStore(), record = data.record;
   store.remove(record);
 }, onChangeFileInput:function(evt, input) {
   var me = this, id = input.id;
   file = document.querySelector('input[id\x3d' + id + ']').files[0], vm = me.getViewModel(), reader = new FileReader;
   reader.addEventListener('load', function() {
-    console.log(reader.result);
     vm.set(id, reader.result);
   }, false);
   if (file) {
     reader.readAsDataURL(file);
   }
+}, onTapComment:function(area) {
+  var me = this, store = me.getViewModel().getStore(area), menu = Ext.create('App.view.widgets.comment.Menu', {width:400, items:[{xtype:'widgetscommentgrid', store:store}]});
+  Ext.Viewport.setMenu(menu, {side:'right'});
+  Ext.Viewport.showMenu('right');
 }, onTapCommentAdd:function(button) {
   var me = this, grid = button.up('grid'), selection = grid.getSelectable().getSelectedRecords(), store = grid.getStore(), type = store.type;
   me.fireEvent('addcomments', type, selection);
@@ -69874,10 +69873,12 @@ Ext.define('App.view.widgets.ShowController', {extend:Ext.app.ViewController, al
   this.redirectTo('history/recipient/' + this.getRecord().getId());
 }});
 Ext.define('App.view.widgets.ShowHeader', {extend:Ext.Container, xtype:'showheader', cls:'show-header', weighted:true, layout:{type:'hbox', align:'end'}, items:{title:{xtype:'component', userCls:'header-title', flex:1, bind:{record:'{record}'}}}});
-Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{rows:true, deselectable:true, checkbox:true, checkboxSelect:true, headerCheckbox:true, checkboxColumnIndex:0, mode:'multi', selection:{type:'records'}}, items:[{xtype:'toolbar', docked:'bottom', items:['-\x3e', {text:'Add selected comments', handler:function(button) {
+Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{mode:'multi', checkbox:true}, items:[{xtype:'toolbar', docked:'bottom', items:[{ui:'flat', iconCls:'fa fa-remove', handler:function() {
+  Ext.Viewport.hideMenu('right');
+}}, '-\x3e', {ui:'flat', iconCls:'fa fa-plus', handler:function(button) {
   Ext.fireEvent('ontapcommentadd', button);
 }}]}]});
-Ext.define('App.view.widgets.comment.Menu', {extend:Ext.menu.Menu, xtype:'widgetscommentmenu', config:{cover:null, reveal:null, side:null, width:300}});
+Ext.define('App.view.widgets.comment.Menu', {extend:Ext.menu.Menu, xtype:'widgetscommentmenu', config:{cover:null, reveal:null, side:null, width:270}});
 Ext.define('App.Application', {extend:Ext.app.Application, name:'App', profiles:['Phone', 'Tablet'], controllers:['Action'], stores:['Menu'], viewport:{controller:'viewport', viewModel:'viewport'}, defaultToken:'locations', launch:function(profile) {
   Ext.Viewport.getController().onLaunch();
   Ext.getBody().removeCls('launching');
