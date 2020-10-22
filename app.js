@@ -69886,7 +69886,7 @@ Ext.define('App.view.widgets.ShowController', {extend:Ext.app.ViewController, al
   this.redirectTo('history/recipient/' + this.getRecord().getId());
 }});
 Ext.define('App.view.widgets.ShowHeader', {extend:Ext.Container, xtype:'showheader', cls:'show-header', weighted:true, layout:{type:'hbox', align:'end'}, items:{title:{xtype:'component', userCls:'header-title', flex:1, bind:{record:'{record}'}}}});
-Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{mode:'multi', checkbox:true}, items:[{xtype:'toolbar', docked:'bottom', items:[{ui:'flat', iconCls:'fa fa-plus', handler:function(button) {
+Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', reference:'commentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{mode:'multi', checkbox:true}, items:[{xtype:'toolbar', docked:'bottom', items:[{ui:'flat', iconCls:'fa fa-plus icon-action', bind:{disabled:'{!commentgrid.selection}'}, handler:function(button) {
   Ext.fireEvent('ontapcommentadd', button);
 }}, '-\x3e', {ui:'flat', iconCls:'fa fa-remove', handler:function() {
   Ext.Viewport.hideMenu('right');

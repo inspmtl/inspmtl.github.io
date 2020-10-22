@@ -1958,6 +1958,14 @@ body.launching::before {
     }
 }
 /* C:/inetpub/wwwroot/BIRES/app/Application.scss:204 */
+*.icon-action {
+    color: #006b33!important;
+}
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:208 */
+.fa:hover {
+    color: #006b33;
+}
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:212 */
 .fa-forumbee:before {
     content: "\f211";
     font-family: "FontAwesome" !important;
