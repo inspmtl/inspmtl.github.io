@@ -69338,9 +69338,9 @@ Ext.define('App.controller.Action', {extend:Ext.app.Controller, listen:{controll
   this.log(action, record);
   return true;
 }});
-Ext.define('App.locale.Language', {statics:{location:{fields:{driveway:{en:'Driveway', fr:'FR Driveway', material:{en:'Material', fr:'FR Material'}, servicable:{en:'Servicable', fr:'FR Servicable'}}, location:{en:'Location', fr:'FR Location', address:{en:'Address', fr:'FR Address'}, city:{en:'City', fr:'FR City'}, country:{en:'Country', fr:'FR Country'}, name:{en:'Name', fr:'FR Name'}, postcode:{en:'PostCode', fr:'FR PostCode'}, region:{en:'Region', fr:'FR Region'}}}}, menu:{locations:{en:'Locations', 
-fr:'FR Locations'}}, messages:{attention:{en:'Attention', fr:'Attention'}, 'delete':{en:'Delete this record?', fr:'Supprimer cet enregistrement?'}, na:{en:'Not Available', fr:'Non disponible'}, processing:{en:'Processing...', fr:'En traitement...'}}, search:{emptytext:{en:'No records found matching your search.', fr:'Aucun enregistrement correspondant à votre recherche'}, titles:{category:{en:'Category', fr:'Catégorie'}, filter:{en:'Filter', fr:'Filtre'}, search:{en:'Search', fr:'Rechercher'}}}, 
-widget:{fields:{comments:{en:'Add Comments', fr:'FR Add Comments'}}}}});
+Ext.define('App.locale.Language', {statics:{location:{fields:{attic:{en:'Attic', fr:'FR attic', material:{en:'Material', fr:'FR Material'}}, driveway:{en:'Driveway', fr:'FR Driveway', material:{en:'Material', fr:'FR Material'}}, location:{en:'Location', fr:'FR Location', address:{en:'Address', fr:'FR Address'}, city:{en:'City', fr:'FR City'}, country:{en:'Country', fr:'FR Country'}, name:{en:'Name', fr:'FR Name'}, postcode:{en:'PostCode', fr:'FR PostCode'}, region:{en:'Region', fr:'FR Region'}}, 
+siding:{en:'Siding', fr:'FR Siding', material:{en:'Material', fr:'FR Material'}}}}, menu:{locations:{en:'Locations', fr:'FR Locations'}}, messages:{attention:{en:'Attention', fr:'Attention'}, 'delete':{en:'Delete this record?', fr:'Supprimer cet enregistrement?'}, na:{en:'Not Available', fr:'Non disponible'}, processing:{en:'Processing...', fr:'En traitement...'}}, search:{emptytext:{en:'No records found matching your search.', fr:'Aucun enregistrement correspondant à votre recherche'}, titles:{category:{en:'Category', 
+fr:'Catégorie'}, filter:{en:'Filter', fr:'Filtre'}, search:{en:'Search', fr:'Rechercher'}}}, widget:{fields:{comments:{en:'Add Comments', fr:'FR Add Comments'}}}}});
 Ext.define('App.model.Base', {extend:Ext.data.Model, identifier:'uuid', fields:[{name:'url', calculate:function(data) {
   return Ext.String.format('{0:lowercase}/{1}', this.owner.entityName, data.id);
 }}], schema:{namespace:'App.model', proxy:{type:'memory', reader:{type:'json', rootProperty:'data', messageProperty:'message'}}}, toUrl:function() {
@@ -69369,7 +69369,7 @@ Ext.define('App.model.Session', {extend:Ext.data.Model, fields:[{name:'token', t
   });
 }});
 Ext.define('App.model.location.Location', {extend:App.model.Base, fields:[{name:'name', type:'string'}, {name:'address', type:'string'}, {name:'postcode', type:'string'}, {name:'region', type:'string'}, {name:'city', type:'string'}, {name:'country', type:'string'}, {name:'headcount', type:'int', persist:false}, {name:'location', type:'auto', defaultValue:{'latitude':37.4256448, 'longitude':-122.1703694}}]});
-Ext.define('App.model.lov.LOV', {extend:App.model.Base, fields:[{name:'KeyID', type:'string'}, {name:'Text', type:'string'}, {name:'Value', type:'string'}]});
+Ext.define('App.model.lov.LOV', {extend:App.model.Base, fields:[{name:'Type', type:'string'}, {name:'Text', type:'string'}, {name:'Value', type:'string'}]});
 Ext.define('App.view.phone.main.Main', {extend:Ext.Container, controller:'phone-main', cls:'phone-profile', layout:'card', items:[{xtype:'panel', layout:'card', reference:'views', defaults:{header:{ui:'dark', defaults:{ui:'flat dark large'}, items:{menu:{xtype:'button', iconCls:'x-fa fa-bars', weight:-10, handler:function() {
   Ext.fireEvent('togglemainmenu');
 }}}}}, lbar:{xtype:'mainmenu', reference:'mainmenu', ui:'dark slide', zIndex:4, items:{trigger:false}}}, {xtype:'container', reference:'navigation', layout:'card', defaults:{header:{ui:'dark', defaults:{ui:'flat dark large'}, items:{back:{xtype:'button', iconCls:'x-fa fa-chevron-left', weight:-10, handler:function() {
@@ -69398,10 +69398,12 @@ Ext.define('App.profile.Tablet', {extend:Ext.app.Profile, views:{main:'App.view.
   Ext.getBody().addCls('tablet-profile');
 }});
 Ext.define('App.store.Location.locations', {extend:Ext.data.Store, alias:'store.locations', model:'App.model.location.Location', sorters:'name', proxy:{type:'ajax', url:'resources/data/location/locations.json', reader:{type:'json', rootProperty:'d'}}});
-Ext.define('App.store.Location.lov.comment.Driveway', {extend:Ext.data.Store, alias:'store.locationlovcommentdriveway', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/comment/driveway.json', reader:{type:'json', rootProperty:'d'}}});
+Ext.define('App.store.Location.lov.comment.Attic', {extend:Ext.data.Store, alias:'store.locationlovcommentattic', model:'App.model.lov.LOV', sorters:[{property:'Text', direction:'ASC'}], proxy:{type:'ajax', url:'resources/data/location/lov/comment/attic.json', reader:{type:'json', rootProperty:'d'}}});
+Ext.define('App.store.Location.lov.comment.Driveway', {extend:Ext.data.Store, alias:'store.locationlovcommentdriveway', model:'App.model.lov.LOV', sorters:[{property:'Text', direction:'ASC'}], proxy:{type:'ajax', url:'resources/data/location/lov/comment/driveway.json', reader:{type:'json', rootProperty:'d'}}});
+Ext.define('App.store.Location.lov.comment.Siding', {extend:Ext.data.Store, alias:'store.locationlovcommentsiding', model:'App.model.lov.LOV', sorters:[{property:'Text', direction:'ASC'}], proxy:{type:'ajax', url:'resources/data/location/lov/comment/siding.json', reader:{type:'json', rootProperty:'d'}}});
 Ext.define('App.store.Menu', {extend:Ext.data.Store, alias:'store.menu', data:[{id:'locations', xtype:'locationbrowse', text:'Locations', icon:'home'}]});
 Ext.define('App.store.location.lov.Materials', {extend:Ext.data.Store, alias:'store.locationlovmaterials', model:'App.model.lov.LOV', proxy:{type:'ajax', url:'resources/data/location/lov/materials.json', reader:{type:'json', rootProperty:'d'}}});
-Ext.define('App.store.widget.Comments', {extend:Ext.data.Store, alias:'store.widgetcomments', proxy:{type:'memory'}});
+Ext.define('App.store.widget.Comments', {extend:Ext.data.Store, alias:'store.widgetcomments', model:'App.model.lov.LOV', proxy:{type:'memory'}});
 Ext.define('App.util.Errors', {statics:{toForm:function(errors) {
   var values = {};
   if (Ext.isObject(errors)) {
@@ -69590,14 +69592,22 @@ width:512, userCls:'page-constrained', items:[{xtype:'tabpanel', reference:'tabs
 }, setRecord:function(record) {
   this.getViewModel().set('record', record);
 }});
-Ext.define('App.view.widgets.comment.List', {extend:Ext.dataview.List, xtype:'widgetscommentlist', minHeight:80, ui:'listing', store:'store.widgetcomments', plugins:[{type:'listswiper', right:[{iconCls:'x-fa fa-remove', commit:'onActionDelete', text:'Delete', ui:'action'}]}], itemTpl:['\x3cdiv class\x3d"item-details"\x3e', '\x3cdiv class\x3d"item-title"\x3e{Text}\x3c/div\x3e', '\x3c/div\x3e']});
-Ext.define('App.view.location.Wizard', {extend:App.view.widgets.Wizard, xtype:['locationcreate', 'locationwizard'], controller:'locationwizard', viewModel:{type:'locationwizard'}, header:{bind:{title:'\x3ca target\x3d"_blank" href\x3d"http://maps.google.com/?q\x3d{record.address}, {record.city},{record.region},{record.country}"\x3e{record.name}\x3c/a\x3e'}}, screens:[{title:'Location', iconCls:'x-fa fa-info', defaults:{required:true}, items:[{xtype:'textfield', name:'name', bind:{label:'{fields.location.name}', 
+Ext.define('App.view.widgets.comment.List', {extend:Ext.dataview.List, xtype:'widgetscommentlist', minHeight:80, ui:'listing', plugins:[{type:'listswiper', right:[{iconCls:'x-fa fa-remove', commit:'onActionDelete', text:'Delete', ui:'action'}]}], itemTpl:['\x3cdiv class\x3d"item-details"\x3e', '\x3cdiv class\x3d"item-title"\x3e{Text}\x3c/div\x3e', '\x3c/div\x3e']});
+Ext.define('App.view.location.Wizard', {extend:App.view.widgets.Wizard, xtype:['locationcreate', 'locationwizard'], controller:'locationwizard', viewModel:{type:'locationwizard'}, header:{bind:{title:'\x3ca target\x3d"_blank" href\x3d"http://maps.google.com/?q\x3d{record.address}, {record.city},{record.region},{record.country}"\x3e{record.name}\x3c/a\x3e'}}, screens:[{title:'Address', iconCls:'x-fa fa-info', defaults:{required:true}, items:[{xtype:'textfield', name:'name', bind:{label:'{fields.location.name}', 
 bind:'{record.name}'}}, {xtype:'textfield', name:'address', bind:{label:'{fields.location.address}', bind:'{record.address}'}}, {xtype:'textfield', name:'city', bind:{label:'{fields.location.city}', bind:'{record.city}'}}, {xtype:'textfield', name:'region', bind:{label:'{fields.location.region}', bind:'{record.region}'}}, {xtype:'textfield', name:'country', required:false, bind:{label:'{fields.location.country}', bind:'{record.country}'}}, {xtype:'textfield', name:'postcode', required:false, bind:{label:'{fields.location.postcode}', 
-bind:'{record.postcode}'}}]}, {title:'Driveway', iconCls:'x-fa fa-car', items:[{xtype:'radiogroup', vertical:true, name:'DW_Appearance', bind:{label:'{fields.driveway.driveway}'}, items:[{boxLabel:'Serviceable', name:'driveway', inputValue:'1'}, {boxLabel:'Not Present', name:'driveway', inputValue:'0'}]}, {xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.driveway.material}', store:'{materials}'}}, {xtype:'container', flex:1, margin:'10, 0, 0, 100', 
-layout:{type:'hbox'}, items:[{flex:1, xtype:'image', bind:{src:'{imgdriveway}'}}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3cdiv\x3e' + '\x3clabel for\x3d "imgdriveway" class\x3d "btn"\x3e\x3ci class\x3d"fa fa-camera fa-3x"\x3e\x3c/i\x3e\x3c/label\x3e' + '\x3cinput id\x3d"imgdriveway" type\x3d"file" accept\x3d"image/*" style\x3d"visibility:hidden;"\x3e' + '\x3c/div\x3e', listeners:{change:{fn:'onChangeFileInput', element:'element', selector:'div'}}}]}]}, 
-{xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3ci class\x3d"fa fa-comment fa-3x"\x3e\x3c/i\x3e', listeners:{click:{fn:function() {
-  Ext.fireEvent('ontapcomment', 'commentsdriveway');
-}, element:'element', selector:'i'}}}]}, {xtype:'widgetscommentlist', reference:'commentdriveway', store:Ext.create('App.store.widget.Comments')}]}]});
+bind:'{record.postcode}'}}]}, {title:'Driveway', iconCls:'x-fa fa-car', items:[{name:'DrivewayAppearance', xtype:'radiogroup', vertical:true, bind:{label:'{fields.driveway.driveway}'}, items:[{boxLabel:'Serviceable', name:'driveway', inputValue:'1'}, {boxLabel:'Not Present', name:'driveway', inputValue:'0'}]}, {name:'DrivewayMaterial', xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.driveway.material}', store:'{lov_materials_driveway}'}}, {xtype:'container', 
+flex:1, margin:'10, 0, 0, 100', layout:{type:'hbox'}, items:[{name:'DrivewayImage', xtype:'image', flex:1, bind:{src:'{imgdriveway}'}}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3cdiv\x3e' + '\x3clabel for\x3d "imgdriveway" class\x3d "btn"\x3e\x3ci class\x3d"fa fa-camera fa-3x"\x3e\x3c/i\x3e\x3c/label\x3e' + '\x3cinput id\x3d"imgdriveway" type\x3d"file" accept\x3d"image/*" style\x3d"visibility:hidden;"\x3e' + '\x3c/div\x3e', listeners:{change:{fn:'onChangeFileInput', 
+element:'element', selector:'div'}}}]}]}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3ci class\x3d"fa fa-comment fa-3x"\x3e\x3c/i\x3e', listeners:{click:{fn:function() {
+  Ext.fireEvent('ontapcomment', 'lov_comments_driveway');
+}, element:'element', selector:'i'}}}]}, {xtype:'widgetscommentlist', bind:{store:'{commentdriveway}'}}]}, {title:'Siding', iconCls:'x-fa fa-cloud', items:[{name:'SidingMaterial', xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.siding.material}', store:'{lov_materials_siding}'}}, {xtype:'container', flex:1, margin:'10, 0, 0, 100', layout:{type:'hbox'}, items:[{name:'SidingImage', xtype:'image', flex:1, bind:{src:'{imgsiding}'}}, {xtype:'container', 
+layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3cdiv\x3e' + '\x3clabel for\x3d "imgsiding" class\x3d "btn"\x3e\x3ci class\x3d"fa fa-camera fa-3x"\x3e\x3c/i\x3e\x3c/label\x3e' + '\x3cinput id\x3d"imgsiding" type\x3d"file" accept\x3d"image/*" style\x3d"visibility:hidden;"\x3e' + '\x3c/div\x3e', listeners:{change:{fn:'onChangeFileInput', element:'element', selector:'div'}}}]}]}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, 
+html:'\x3ci class\x3d"fa fa-comment fa-3x"\x3e\x3c/i\x3e', listeners:{click:{fn:function() {
+  Ext.fireEvent('ontapcomment', 'lov_comments_siding');
+}, element:'element', selector:'i'}}}]}, {xtype:'widgetscommentlist', bind:{store:'{commentsiding}'}}]}, {title:'Attic', iconCls:'x-fa fa-forumbee', items:[{name:'AtticMaterial', xtype:'combobox', queryMode:'local', displayField:'Text', valueField:'Value', bind:{label:'{fields.attic.material}', store:'{lov_materials_attic}'}}, {xtype:'container', flex:1, margin:'10, 0, 0, 100', layout:{type:'hbox'}, items:[{name:'AtticImage', xtype:'image', flex:1, bind:{src:'{imgattic}'}}, {xtype:'container', layout:{type:'vbox', 
+align:'right'}, items:[{xtype:'container', width:50, html:'\x3cdiv\x3e' + '\x3clabel for\x3d "imgattic" class\x3d "btn"\x3e\x3ci class\x3d"fa fa-camera fa-3x"\x3e\x3c/i\x3e\x3c/label\x3e' + '\x3cinput id\x3d"imgattic" type\x3d"file" accept\x3d"image/*" style\x3d"visibility:hidden;"\x3e' + '\x3c/div\x3e', listeners:{change:{fn:'onChangeFileInput', element:'element', selector:'div'}}}]}]}, {xtype:'container', layout:{type:'vbox', align:'right'}, items:[{xtype:'container', width:50, html:'\x3ci class\x3d"fa fa-comment fa-3x"\x3e\x3c/i\x3e', 
+listeners:{click:{fn:function() {
+  Ext.fireEvent('ontapcomment', 'lov_comments_attic');
+}, element:'element', selector:'i'}}}]}, {xtype:'widgetscommentlist', bind:{store:'{commentattic}'}}]}]});
 Ext.define('App.view.widgets.WizardController', {extend:Ext.app.ViewController, alias:'controller.wizard', listen:{global:{ontapcomment:'onTapComment', ontapcommentadd:'onTapCommentAdd'}}, onActionDelete:function(list, data) {
   var me = this, store = list.getStore(), record = data.record;
   store.remove(record);
@@ -69610,12 +69620,13 @@ Ext.define('App.view.widgets.WizardController', {extend:Ext.app.ViewController, 
   if (file) {
     reader.readAsDataURL(file);
   }
-}, onTapComment:function(area) {
-  var me = this, store = me.getViewModel().getStore(area), menu = Ext.create('App.view.widgets.comment.Menu', {width:400, items:[{xtype:'widgetscommentgrid', store:store}]});
+}, onTapComment:function(type) {
+  var me = this, store = me.getViewModel().getStore(type), menu = Ext.create('App.view.widgets.comment.Menu', {width:400, items:[{xtype:'widgetscommentgrid', store:store}]});
   Ext.Viewport.setMenu(menu, {side:'right'});
   Ext.Viewport.showMenu('right');
 }, onTapCommentAdd:function(button) {
   var me = this, grid = button.up('grid'), selection = grid.getSelectable().getSelectedRecords(), store = grid.getStore(), type = store.type;
+  Ext.Viewport.hideMenu('right');
   me.fireEvent('addcomments', type, selection);
 }, onTapDelete:function(button) {
   var me = this, record = me.getViewModel().get('record'), store = record.getStore();
@@ -69690,21 +69701,23 @@ Ext.define('App.view.widgets.WizardController', {extend:Ext.app.ViewController, 
 Ext.define('App.view.location.WizardController', {extend:App.view.widgets.WizardController, alias:'controller.locationwizard', listen:{controller:{'*':{addcomments:'addComments'}}}, init:function() {
   var me = this;
   me.translateLabels();
+  me.callParent(arguments);
 }, addComments:function(type, selection) {
-  var me = this, ref = 'comment' + type.split('comment')[1];
-  list = me.lookup(ref), store = list.getStore(), menu = Ext.Viewport.getMenus().right;
+  var me = this, type = type.split('lov')[1], store = me.getViewModel().getStore(type);
   store.add(selection);
-  Ext.Viewport.hideMenu('right');
 }, translateLabels:function() {
   var me = this, vm = me.getViewModel();
   try {
-    vm.set({fields:{comments:App.locale.Language.widget.fields.comments[App.app.currentLocale], driveway:{driveway:App.locale.Language.location.fields.driveway[App.app.currentLocale], material:App.locale.Language.location.fields.driveway.material[App.app.currentLocale], servicable:App.locale.Language.location.fields.driveway.servicable[App.app.currentLocale]}, location:{address:App.locale.Language.location.fields.location.address[App.app.currentLocale], city:App.locale.Language.location.fields.location.city[App.app.currentLocale], 
-    country:App.locale.Language.location.fields.location.country[App.app.currentLocale], name:App.locale.Language.location.fields.location.name[App.app.currentLocale], postcode:App.locale.Language.location.fields.location.postcode[App.app.currentLocale], region:App.locale.Language.location.fields.location.region[App.app.currentLocale]}}});
+    vm.set({fields:{attic:{material:App.locale.Language.location.fields.attic.material[App.app.currentLocale]}, driveway:{driveway:App.locale.Language.location.fields.driveway[App.app.currentLocale], material:App.locale.Language.location.fields.driveway.material[App.app.currentLocale]}, location:{address:App.locale.Language.location.fields.location.address[App.app.currentLocale], city:App.locale.Language.location.fields.location.city[App.app.currentLocale], country:App.locale.Language.location.fields.location.country[App.app.currentLocale], 
+    name:App.locale.Language.location.fields.location.name[App.app.currentLocale], postcode:App.locale.Language.location.fields.location.postcode[App.app.currentLocale], region:App.locale.Language.location.fields.location.region[App.app.currentLocale]}, siding:{material:App.locale.Language.location.fields.siding.material[App.app.currentLocale]}}});
   } catch (e$36) {
     console.log(e$36);
   }
 }});
-Ext.define('App.view.location.WizardModel', {extend:Ext.app.ViewModel, alias:'viewmodel.locationwizard', data:{test:'my test', record:null}, stores:{materials:{autoLoad:true, type:'locationlovmaterials'}, commentsdriveway:{autoLoad:true, type:'locationlovcommentdriveway'}}});
+Ext.define('App.view.location.WizardModel', {extend:Ext.app.ViewModel, alias:'viewmodel.locationwizard', data:{record:null}, stores:{commentattic:{autoLoad:true, type:'widgetcomments'}, commentdriveway:{autoLoad:true, type:'widgetcomments'}, commentsiding:{autoLoad:true, type:'widgetcomments'}, lov_comments_attic:{autoLoad:true, type:'locationlovcommentattic'}, lov_comments_driveway:{autoLoad:true, type:'locationlovcommentdriveway'}, lov_comments_siding:{autoLoad:true, type:'locationlovcommentsiding'}, 
+lov_materials:{autoLoad:true, type:'locationlovmaterials'}, lov_materials_attic:{source:'{lov_materials}', type:'chained', filters:[{property:'Type', value:/Attic/}]}, lov_materials_driveway:{source:'{lov_materials}', type:'chained', filters:[{property:'Type', value:/Driveway/}]}, lov_materials_siding:{source:'{lov_materials}', type:'chained', filters:[function(record) {
+  return record.get('Type') === 'Siding';
+}]}}});
 Ext.define('App.view.main.MainController', {extend:Ext.app.ViewController, alias:'controller.main', routes:{':type(/:args)?':{action:'handleNavigationRoute', conditions:{':type':'(locations)', ':args':'(.*)'}}, ':type/:id(/:args)?':{action:'handleDataRoute', conditions:{':type':'(location)', ':id':'([a-f0-9-]{36}|create|edit|wizard)', ':args':'(.*)'}}}, listen:{global:{togglemainmenu:'onToggleMainMenu', navigationback:'onNavigationBack'}}, init:function(cmp) {
   var me = this, language = App.util.State.get('language');
   language = language === 'en' || language === 'fr' ? language : 'en';
@@ -69873,10 +69886,10 @@ Ext.define('App.view.widgets.ShowController', {extend:Ext.app.ViewController, al
   this.redirectTo('history/recipient/' + this.getRecord().getId());
 }});
 Ext.define('App.view.widgets.ShowHeader', {extend:Ext.Container, xtype:'showheader', cls:'show-header', weighted:true, layout:{type:'hbox', align:'end'}, items:{title:{xtype:'component', userCls:'header-title', flex:1, bind:{record:'{record}'}}}});
-Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{mode:'multi', checkbox:true}, items:[{xtype:'toolbar', docked:'bottom', items:[{ui:'flat', iconCls:'fa fa-remove', handler:function() {
-  Ext.Viewport.hideMenu('right');
-}}, '-\x3e', {ui:'flat', iconCls:'fa fa-plus', handler:function(button) {
+Ext.define('App.view.widgets.comment.Grid', {extend:Ext.grid.Grid, xtype:'widgetscommentgrid', flex:1, layout:'fit', columns:[{text:'Comment', dataIndex:'Text', flex:1}], selectable:{mode:'multi', checkbox:true}, items:[{xtype:'toolbar', docked:'bottom', items:[{ui:'flat', iconCls:'fa fa-plus', handler:function(button) {
   Ext.fireEvent('ontapcommentadd', button);
+}}, '-\x3e', {ui:'flat', iconCls:'fa fa-remove', handler:function() {
+  Ext.Viewport.hideMenu('right');
 }}]}]});
 Ext.define('App.view.widgets.comment.Menu', {extend:Ext.menu.Menu, xtype:'widgetscommentmenu', config:{cover:null, reveal:null, side:null, width:270}});
 Ext.define('App.Application', {extend:Ext.app.Application, name:'App', profiles:['Phone', 'Tablet'], controllers:['Action'], stores:['Menu'], viewport:{controller:'viewport', viewModel:'viewport'}, defaultToken:'locations', launch:function(profile) {
