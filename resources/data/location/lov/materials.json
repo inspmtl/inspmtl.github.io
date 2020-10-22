@@ -1,44 +1,24 @@
 {
   "d": [
     {
-      "Type": "Attic",
-      "Value": "Attic 1",
-      "Text": "Attic 1"
+      "Value": "Asphalt",
+      "Text": "Asphalt"
     },
     {
-      "Type": "Attic",
-      "Value": "Attic 2",
-      "Text": "Attic 2"
-    },
-    { 
-      
-      "Type": "Driveway",
       "Value": "Concrete",
       "Text": "Concrete"
     },
-    { "Type": "Driveway",
+    {
       "Value": "Gravel",
       "Text": "Gravel"
     },
-    { 
-      "Type": "Driveway",
+    {
       "Value": "Unistone",
       "Text": "Unistone"
     },
-    { 
-      "Type": "Driveway",
+    {
       "Value": "Dirt",
       "Text": "Dirt"
-    },
-    {
-      "Type": "Siding",
-      "Value": "Siding 1",
-      "Text": "Siding 1"
-    },
-    {
-      "Type": "Siding",
-      "Value": "Siding 2",
-      "Text": "Siding 2"
     }
   ]
 }
