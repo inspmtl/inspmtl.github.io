@@ -1,0 +1,64 @@
+{
+  "d": [
+    {
+      "Text": "NA Cathedral",
+      "Value":"Limited review due to lack of space."
+    },
+    {
+      "Text": "NA Flat Roof",
+      "Value":"Limited review due to lack of space."
+    },
+    {
+      "Text": "Ltd Space",
+      "Value":"Limited review due to lack of space."
+    },
+    {
+      "Text": "Cathedral",
+      "Value":"A portion of the roof is of cathedral construction; it is therefore impossible to inspect the complete space between the ceiling and the roof deck at that area."
+    },
+    {
+      "Text": "High Humidity",
+      "Value":"Signs of humidity noted at sheathing. This may be caused by the presence of only one gable vent, which may cause turbulence.  We recommend condemning this vent in order to optimize attic ventilation."
+    },
+    {
+      "Text": "Overheating",
+      "Value": "Signs of overheating (darkened) and frost noted, possibly caused by lack of ventilation. See comments on ventilation and/or insulation."
+    },
+    {
+      "Text": "Ventilation Difficult",
+      "Value":"Due to the design of this roof, efficient ventilation is difficult. This causes overheating in the attic, icicles at roof edges and a shorter lifespan of the roofing material. If client wishes to obtain a normal lifespan of roofing materials and eliminate icicles (and potential water infiltration), a ventilation specialist must be consulted in order to further evaluate/correct this situation."
+    },
+    {
+      "Text": "Soffit, Roof Gable Vents",
+      "Value":"Soffit vents, roof vents and gable vents observed. This can produce conflicting air currents in the attic space, causing turbulence, hindering efficient ventilation of the attic space.  We recommend condemning the gable vents in order to optimize the Maximum type roof vent function, improving overall attic ventilation."
+    },
+    {
+      "Text": "Add Insulation",
+      "Value":"We recommend upgrading the insulation in the attic to a minimum of R-32 (the higher, the better); Typically, the thickness of the insulation should be approximately 12 inches. We recommend installing additional insulation to increased comfort and reduce heating/cooling costs, as well as reduce the possible formation of ice dams during winter."
+    },
+    {
+      "Text": "Storage",
+      "Value":"Storage noted in the attic. Please note that the structure is not intended for this task and this practice compresses the insulation. We therefore recommend discontinuing this practice and placing the insulation properly in order to try to recuperate the initial insulation factor."
+    },
+    {
+      "Text": "Soffits Blocked",
+      "Value":"Soffit vents are completely or partially blocked in areas. We recommend clearing soffit vents where required to enhance air circulation in the attic, prevent moisture/humidity accumulation and prevent possible damage/deterioration to the structure."
+    },
+    {
+      "Text": "Active Water Infiltration",
+      "Value":"Active water infiltration noted. We recommend correcting this condition to prevent damages/deterioration to the structure."
+    },
+    {
+      "Text": "Previous Water Infiltration",
+      "Value":"Signs of previous water damage noted. Dry at time of inspection. Unable to determine source. We recommend verifying this situation during rainfall to determine if active or passive, and correct as required."
+    },
+    {
+      "Text": "Excrement",
+      "Value":"A multitude of excrements was observed. This indicates the presence of birds/rodents, now or in the past. The search for this type of issue is beyond the scope of this inspection. We recommend consulting the seller and/or an exterminator to resolve this problem, as needed."
+    },
+    {
+      "Text": "Contractor",
+      "Value":"We recommend consulting a licensed contractor to further evaluate/correct this situation."
+    }
+  ]
+}

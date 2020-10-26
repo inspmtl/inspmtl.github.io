@@ -1957,3 +1957,16 @@ body.launching::before {
         width: 50%;
     }
 }
+/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:204 */
+*.icon-action {
+    color: #006b33!important;
+}
+/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:208 */
+.fa:hover {
+    color: #006b33;
+}
+/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:212 */
+.fa-forumbee:before {
+    content: "\f211";
+    font-family: "FontAwesome" !important;
+}

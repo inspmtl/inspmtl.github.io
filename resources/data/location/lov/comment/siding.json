@@ -1,0 +1,56 @@
+{
+  "d": [
+    {
+      "Text": "Ltd Snow",
+      "Value":"Limited review due to snow/ice accumulation."
+    },
+    {
+      "Text": "Seal Different",
+      "Value":"We recommend sealing at joints of different exterior sidings to prevent damages caused by water/humidity infiltration."
+    },
+    {
+      "Text": "Mortar",
+      "Value":"Loose/missing/cracked mortar noted.  Repair and/or repointing of the masonry joints is recommended to prevent damage/deterioration due to water/humidity infiltration. We recommend consulting a licensed mason for further evaluation and correction of this situation."
+    },
+    {
+      "Text": "Deterioration",
+      "Value": "Deterioration noted.  We recommend repairs be performed to prevent further damages."
+    },
+    {
+      "Text": "Damage",
+      "Value":"Damaged siding noted.  We recommend repairs be performed to prevent further damages."
+    },
+    {
+      "Text": "Too low",
+      "Value":"Siding is too low in certain areas. Risk of water infiltration at the ventilation openings (weepholes) where present, and/or the joint between the foundation wall and the siding.  We recommend moving earth away from siding to allow for proper ventilation and to prevent premature deterioration of siding and/or its supporting structure, or possible damages due to water infiltration."
+    },
+    {
+      "Text": "Detached Siding",
+      "Value":"Detached siding noted. We recommend correcting this condition to prevent damages/deterioration to the structure."
+    },
+    {
+      "Text": "Undulations",
+      "Value":"Undulations/waves noted in vinyl siding. Possibly caused by inadequate installation. We recommend consulting a licensed contractor to further evaluate/correct this situation."
+    },
+    {
+      "Text": "Flower Box",
+      "Value":"Flower boxes are integrated into the exterior siding. We often observe heavy damages due to such items. We recommend condemning and sealing them as a preventive measure."
+    },
+    {
+      "Text": "Missing",
+      "Value":"Missing siding noted. We recommend correcting this condition to prevent damages/deterioration to the structure."
+    },
+    {
+      "Text": "",
+      "Value":""
+    },
+    {
+      "Text": "",
+      "Value":""
+    },
+    {
+      "Text": "Contractor",
+      "Value":"We recommend consulting a licensed contractor to further evaluate/correct this situation."
+    }
+  ]
+}

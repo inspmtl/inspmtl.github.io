@@ -1,24 +1,193 @@
 {
   "d": [
     {
+      "Type": "Attic",
+      "Value": "Fiberglass",
+      "Text": "Fiberglass"
+    },
+    {
+      "Type": "Attic",
+      "Value": "Blown-in Fiberglass",
+      "Text": "Blown-in Fiberglass"
+    },
+    {
+      "Type": "Attic",
+      "Value": "Blown-in mineral wool",
+      "Text": "Blown-in mineral wool"
+    },
+    {
+      "Type": "Attic",
+      "Value": "Cellulose",
+      "Text": "Cellulose"
+    },
+    {
+      "Type": "Attic",
+      "Value": "Sawdust",
+      "Text": "Sawdust"
+    },
+    {
+      "Type": "Attic",
+      "Value": "Vermiculite",
+      "Text": "Vermiculite"
+    },
+    {   
+      "Type": "Driveway",
       "Value": "Asphalt",
       "Text": "Asphalt"
     },
+    {   
+      "Type": "Driveway",
+      "Value": "Concrete",
+      "Text": "Concrete"
+    },
+    { "Type": "Driveway",
+      "Value": "Gravel",
+      "Text": "Gravel"
+    },
+    { 
+      "Type": "Driveway",
+      "Value": "Unistone",
+      "Text": "Unistone"
+    },
+    { 
+      "Type": "Driveway",
+      "Value": "Dirt",
+      "Text": "Dirt"
+    },
+    { 
+      "Type": "Electrical",
+      "Value": "Copper",
+      "Text": "Copper"
+    },
+    { 
+      "Type": "Electrical",
+      "Value": "Aluminum",
+      "Text": "Aluminum"
+    },
+    { 
+      "Type": "Gutters",
+      "Value": "Metal",
+      "Text": "Metal"
+    },
+    { 
+      "Type": "Gutters",
+      "Value": "Vinyl",
+      "Text": "Vinyl"
+    },
+    { 
+      "Type": "Roof",
+      "Value": "Asphalt Shingles",
+      "Text": "Asphalt Shingles"
+    },
     {
+      "Type": "Siding",
+      "Value": "The siding is primarily brick",
+      "Text": "Brick"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Stone",
+      "Text": "Stone"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Vinyl",
+      "Text": "Vinyl"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Aluminum",
+      "Text": "Aluminum"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Wood",
+      "Text": "Wood"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Synthetic Wood",
+      "Text": "Synthetic Wood"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Stucco",
+      "Text": "Stucco"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Synthetic Stucco",
+      "Text": "Synthetic Stucco"
+    },
+    {
+      "Type": "Siding",
+      "Value": "Aggregate",
+      "Text": "Aggregate"
+    },
+    {
+      "Type": "Siding",
       "Value": "Concrete",
       "Text": "Concrete"
     },
     {
-      "Value": "Gravel",
-      "Text": "Gravel"
+      "Type": "Siding",
+      "Value": "Asbestos tiles",
+      "Text": "Asbestos tiles"
     },
     {
-      "Value": "Unistone",
-      "Text": "Unistone"
+      "Type": "Window Material",
+      "Value": "Aluminum",
+      "Text": "Aluminum"
     },
     {
-      "Value": "Dirt",
-      "Text": "Dirt"
+      "Type": "Window Material",
+      "Value": "Vinyl",
+      "Text": "Vinyl"
+    },
+    {
+      "Type": "Window Material",
+      "Value": "Wooden",
+      "Text": "Wooden"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Casement",
+      "Text": "Casement"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Slider",
+      "Text": "Slider"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Single Hung",
+      "Text": "Single Hung"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Double Hung",
+      "Text": "Double Hung"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Fixed type",
+      "Text": "Fixed type"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Pivoting",
+      "Text": "Pivoting"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Awning",
+      "Text": "Awning"
+    },
+    {
+      "Type": "Window Types",
+      "Value": "Pane-on-pane",
+      "Text": "Pane-on-pane"
     }
   ]
 }

@@ -1,24 +1,28 @@
 {
   "d": [
     {
-      "Text": "Deterioration - Cracks Noted",
-      "Value": "Cracks noted.  We recommend repairing and sealing these cracks to prevent possible damages due to water infiltration."
-    },
-    {
-      "Text": "Heaving",
-      "Value":"Heaving noted.  As a result, water does not drain to the pit and/or can infiltrate under the garage door. We recommend repairs be performed to prevent possible damages due to water infiltration.  We recommend consulting a licensed contractor as required."
-    },
-    {
       "Text": "Vehicles/Shelter",
-      "Value":"Limited review due to the presence of vehicles and/or a temporary snow shelter (Tempo)."
+      "Value":"Limited review due to the presence of a vehicle and/or temporary snow shelter (Tempo)."
     },
     {
-      "Text": "Limited (Snow)",
+      "Text": "Ltd Snow",
       "Value":"Limited review due to snow/ice accumulation."
     },
     {
-      "Text": "Not visualised (Snow)",
-      "Value":"Not visualised due to snow/ice accumulation. We recommend obtaining declaration from the seller concerning condition."
+      "Text": "NV (Snow)",
+      "Value":"Not visualised due to snow/ice accumulation. We recommend obtaining declaration from the seller concerning the condition of the driveway."
+    },
+    {
+      "Text": "Cracks",
+      "Value": "Cracks noted.  We recommend repairing and sealing these cracks to prevent possible damages due to water infiltration."
+    },
+    {
+      "Text": "Deterioration",
+      "Value": "Deterioration noted.  We recommend repairs be performed to prevent further damages."
+    },
+    {
+      "Text": "Heaving",
+      "Value":"Heaving noted.  As a result, water does not drain to the pit and/or may infiltrate under the garage door. We recommend repairs be performed to prevent possible damages due to water infiltration.  We recommend consulting a licensed contractor as required."
     },
     {
       "Text": "Negative Slope",
@@ -26,11 +30,11 @@
     },
     {
       "Text": "Pavement over Siding",
-      "Value":"The pavement has been installed too high and covers part of the siding. The foundation should exceed the surface of the driveway by 6 inches. Risk of potential damage to the structure/siding due to water/humidity build-up. We recommend verifying the condition of the structure/siding and correcting this situation."
+      "Value":"The pavement has been installed too high and covers part of the siding. Ideally, the foundation should exceed the surface of the driveway by 6 inches. Risk of potential damage to the structure/siding due to water infiltration and/or humidity build-up behind the siding. We recommend verifying the condition of the structure/siding and correcting as required to prevent possible damages."
     },
     {
       "Text": "Seal at Joint/Wall",
-      "Value":"We recommend sealing at the joint between the driveway and the wall/garage slab to prevent possible damages caused by water infiltration."
+      "Value":"We recommend sealing the joint between the driveway and the wall/garage slab to prevent possible damages due to water infiltration."
     },
     {
       "Text": "Contractor",

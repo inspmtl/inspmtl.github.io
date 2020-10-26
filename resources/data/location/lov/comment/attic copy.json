@@ -1,0 +1,40 @@
+{
+  "d": [
+    {
+      "Text": "ATTIC Deterioration - Cracks Noted",
+      "Value": "Cracks noted.  We recommend repairing and sealing these cracks to prevent possible damages due to water infiltration."
+    },
+    {
+      "Text": "ATTIC Heaving",
+      "Value":"Heaving noted.  As a result, water does not drain to the pit and/or can infiltrate under the garage door. We recommend repairs be performed to prevent possible damages due to water infiltration.  We recommend consulting a licensed contractor as required."
+    },
+    {
+      "Text": "ATTIC Vehicles/Shelter",
+      "Value":"Limited review due to the presence of vehicles and/or a temporary snow shelter (Tempo)."
+    },
+    {
+      "Text": "ATTIC Limited (Snow)",
+      "Value":"Limited review due to snow/ice accumulation."
+    },
+    {
+      "Text": "ATTIC Not visualised (Snow)",
+      "Value":"Not visualised due to snow/ice accumulation. We recommend obtaining declaration from the seller concerning condition."
+    },
+    {
+      "Text": "ATTIC Negative Slope",
+      "Value":"Negative slope noted. Risk of water infiltration into the garage. We recommend correcting to move water away from the structure and/or garage slab."
+    },
+    {
+      "Text": "ATTIC Pavement over ATTIC",
+      "Value":"The pavement has been installed too high and covers part of the ATTIC. The foundation should exceed the surface of the driveway by 6 inches. Risk of potential damage to the structure/ATTIC due to water/humidity build-up. We recommend verifying the condition of the structure/ATTIC and correcting this situation."
+    },
+    {
+      "Text": "ATTIC Seal at Joint/Wall",
+      "Value":"We recommend sealing at the joint between the driveway and the wall/garage slab to prevent possible damages caused by water infiltration."
+    },
+    {
+      "Text": "ATTIC Contractor",
+      "Value":"We recommend consulting a licensed contractor to further evaluate/correct this condition."
+    }
+  ]
+}

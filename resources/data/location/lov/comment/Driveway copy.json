@@ -1,0 +1,40 @@
+{
+  "d": [
+    {
+      "Text": "Deterioration - Cracks Noted",
+      "Value": "Cracks noted.  We recommend repairing and sealing these cracks to prevent possible damages due to water infiltration."
+    },
+    {
+      "Text": "Heaving",
+      "Value":"Heaving noted.  As a result, water does not drain to the pit and/or can infiltrate under the garage door. We recommend repairs be performed to prevent possible damages due to water infiltration.  We recommend consulting a licensed contractor as required."
+    },
+    {
+      "Text": "Vehicles/Shelter",
+      "Value":"Limited review due to the presence of vehicles and/or a temporary snow shelter (Tempo)."
+    },
+    {
+      "Text": "Limited (Snow)",
+      "Value":"Limited review due to snow/ice accumulation."
+    },
+    {
+      "Text": "Not visualised (Snow)",
+      "Value":"Not visualised due to snow/ice accumulation. We recommend obtaining declaration from the seller concerning condition."
+    },
+    {
+      "Text": "Negative Slope",
+      "Value":"Negative slope noted. Risk of water infiltration into the garage. We recommend correcting to move water away from the structure and/or garage slab."
+    },
+    {
+      "Text": "Pavement over Siding",
+      "Value":"The pavement has been installed too high and covers part of the siding. The foundation should exceed the surface of the driveway by 6 inches. Risk of potential damage to the structure/siding due to water/humidity build-up. We recommend verifying the condition of the structure/siding and correcting this situation."
+    },
+    {
+      "Text": "Seal at Joint/Wall",
+      "Value":"We recommend sealing at the joint between the driveway and the wall/garage slab to prevent possible damages caused by water infiltration."
+    },
+    {
+      "Text": "Contractor",
+      "Value":"We recommend consulting a licensed contractor to further evaluate/correct this condition."
+    }
+  ]
+}
