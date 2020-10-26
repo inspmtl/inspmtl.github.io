@@ -1,174 +1,174 @@
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
 .x-panelheader-dialog {
     background-color: white;
     background-image: none;
     border-width: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Header.scss:104 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:104 */
 .x-panelheader-dialog.x-docked-right {
     border-width: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Header.scss:118 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:118 */
 .x-panelheader-dialog.x-docked-left {
     border-width: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Header.scss:132 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:132 */
 .x-panelheader-dialog.x-docked-bottom {
     border-width: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:117 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:117 */
 .x-paneltitle-dialog {
     font-size: 18px;
     line-height: 2;
     padding: 16px 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:123 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:123 */
 .x-big .x-paneltitle-dialog {
     padding: 20px 24px;
     font-size: 18px;
     line-height: 2;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:130 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:130 */
 .x-paneltitle-dialog .x-icon-el {
     width: 24px;
     height: 24px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-paneltitle-dialog .x-icon-el {
     width: 24px;
     height: 24px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-paneltitle-dialog .x-icon-el:before {
     font-size: 24px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-paneltitle-dialog .x-icon-el:before {
     font-size: 24px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:188 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:188 */
 .x-paneltitle-dialog.x-rotate-90 {
     padding: 20px 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:192 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:192 */
 .x-big .x-paneltitle-dialog.x-rotate-90 {
     padding: 24px 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:238 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:238 */
 .x-paneltitle-dialog.x-rotate-270 {
     padding: 20px 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:242 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:242 */
 .x-big .x-paneltitle-dialog.x-rotate-270 {
     padding: 24px 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:288 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:288 */
 .x-paneltitle-dialog.x-vertical .x-text-el {
     width: 2;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:293 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:293 */
 .x-big .x-paneltitle-dialog.x-vertical .x-text-el {
     width: 2;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:917 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:917 */
 .x-panel-invalid > .x-anchor-el {
     margin: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
 .x-panel-invalid > .x-anchor-el .x-pointer-el {
     fill: #d63e08;
     stroke-width: 1px;
     stroke: #d63e08;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:928 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:928 */
 .x-panel-invalid > .x-anchor-el.x-top {
     width: 12px;
     height: 8px;
     top: -8px;
     padding-bottom: 1px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:935 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:935 */
 .x-panel-invalid > .x-anchor-el.x-bottom {
     width: 12px;
     height: 8px;
     bottom: -8px;
     padding-top: 1px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:942 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:942 */
 .x-panel-invalid > .x-anchor-el.x-left {
     height: 12px;
     width: 8px;
     left: -8px;
     padding-right: 1px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:948 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:948 */
 .x-panel-invalid > .x-anchor-el.x-left .x-pointer-el {
     transform-origin: 6px 6px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:953 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:953 */
 .x-panel-invalid > .x-anchor-el.x-right {
     height: 12px;
     width: 8px;
     right: -8px;
     padding-left: 1px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:959 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:959 */
 .x-panel-invalid > .x-anchor-el.x-right .x-pointer-el {
     transform-origin: 4px 4px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
 .x-panel-invalid-body-el {
     background-color: #d63e08;
     color: white;
     border-width: 0;
     border-style: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:984 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:984 */
 .x-panel-invalid-boxscroller {
     border-width: 0;
     border-style: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
 .x-panel-invalid-boxscroller > .x-boxscroller-body > .x-body-el {
     border: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:2 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:2 */
 .x-panel-invalid-outer-border-l {
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:7 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:7 */
 .x-panel-invalid-outer-border-b {
     border-bottom-color: #d63e08 !important;
     border-bottom-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:12 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:12 */
 .x-panel-invalid-outer-border-bl {
     border-bottom-color: #d63e08 !important;
     border-bottom-width: 1px !important;
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:27 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:27 */
 .x-panel-invalid-outer-border-r {
     border-right-color: #d63e08 !important;
     border-right-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:32 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:32 */
 .x-panel-invalid-outer-border-rl {
     border-right-color: #d63e08 !important;
     border-right-width: 1px !important;
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:39 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:39 */
 .x-panel-invalid-outer-border-rb {
     border-right-color: #d63e08 !important;
     border-right-width: 1px !important;
     border-bottom-color: #d63e08 !important;
     border-bottom-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:54 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:54 */
 .x-panel-invalid-outer-border-rbl {
     border-right-color: #d63e08 !important;
     border-right-width: 1px !important;
@@ -177,26 +177,26 @@
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:71 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:71 */
 .x-panel-invalid-outer-border-t {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:76 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:76 */
 .x-panel-invalid-outer-border-tl {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:91 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:91 */
 .x-panel-invalid-outer-border-tb {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
     border-bottom-color: #d63e08 !important;
     border-bottom-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:98 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:98 */
 .x-panel-invalid-outer-border-tbl {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
@@ -205,14 +205,14 @@
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:115 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:115 */
 .x-panel-invalid-outer-border-tr {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
     border-right-color: #d63e08 !important;
     border-right-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:130 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:130 */
 .x-panel-invalid-outer-border-trl {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
@@ -221,7 +221,7 @@
     border-left-color: #d63e08 !important;
     border-left-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:147 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:147 */
 .x-panel-invalid-outer-border-trb {
     border-top-color: #d63e08 !important;
     border-top-width: 1px !important;
@@ -230,54 +230,54 @@
     border-bottom-color: #d63e08 !important;
     border-bottom-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:164 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/etc/mixins/border-management.scss:164 */
 .x-panel-invalid-outer-border-trbl {
     border-color: #d63e08 !important;
     border-width: 1px !important;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
 .x-panel-flat > .x-anchor-el .x-pointer-el {
     fill: transparent;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
 .x-panel-flat-body-el {
     background-color: transparent;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
 .x-panel-flat-boxscroller > .x-boxscroller-body > .x-body-el {
     border: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
 .x-panelheader-flat {
     background-color: transparent;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
 .x-panel-dark-boxscroller > .x-boxscroller-body > .x-body-el {
     border: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Header.scss:68 */
 .x-panelheader-dark {
     background-color: #353535;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:117 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:117 */
 .x-paneltitle-dark {
     color: #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/panel/Title.scss:130 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/panel/Title.scss:130 */
 .x-paneltitle-dark .x-icon-el {
     color: #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/Mask.scss:3 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/Mask.scss:3 */
 .x-mask.x-has-message .x-loading-spinner-outer {
     height: auto;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/Mask.scss:9 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/Mask.scss:9 */
 .x-mask.x-loading-mask .x-mask-inner {
     background-color: transparent;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:145 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:145 */
 .x-loading-spinner {
     font-size: 250%;
     height: 26px;
@@ -286,7 +286,7 @@
     -webkit-transform-origin: 13px 13px;
     transform-origin: 13px 13px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:155 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:155 */
 .x-loading-spinner > span,
 .x-loading-spinner > span:before,
 .x-loading-spinner > span:after {
@@ -300,92 +300,92 @@
     transform-origin: 2px 13px;
     content: " ";
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:168 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:168 */
 .x-loading-spinner > span {
     left: 50%;
     margin-left: -0.05em;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:172 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:172 */
 .x-loading-spinner > span.x-loading-top {
     background-color: rgba(53, 53, 53, 0.99);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:175 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:175 */
 .x-loading-spinner > span.x-loading-top::after {
     background-color: rgba(53, 53, 53, 0.9);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:178 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:178 */
 .x-loading-spinner > span.x-loading-left::before {
     background-color: rgba(53, 53, 53, 0.8);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:181 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:181 */
 .x-loading-spinner > span.x-loading-left {
     background-color: rgba(53, 53, 53, 0.7);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:184 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:184 */
 .x-loading-spinner > span.x-loading-left::after {
     background-color: rgba(53, 53, 53, 0.6);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:187 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:187 */
 .x-loading-spinner > span.x-loading-bottom::before {
     background-color: rgba(53, 53, 53, 0.5);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:190 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:190 */
 .x-loading-spinner > span.x-loading-bottom {
     background-color: rgba(53, 53, 53, 0.4);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:193 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:193 */
 .x-loading-spinner > span.x-loading-bottom::after {
     background-color: rgba(53, 53, 53, 0.35);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:196 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:196 */
 .x-loading-spinner > span.x-loading-right::before {
     background-color: rgba(53, 53, 53, 0.3);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:199 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:199 */
 .x-loading-spinner > span.x-loading-right {
     background-color: rgba(53, 53, 53, 0.25);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:202 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:202 */
 .x-loading-spinner > span.x-loading-right::after {
     background-color: rgba(53, 53, 53, 0.2);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:205 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:205 */
 .x-loading-spinner > span.x-loading-top::before {
     background-color: rgba(53, 53, 53, 0.15);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:212 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:212 */
 .x-loading-spinner > span.x-loading-top {
     /* Rotate each of the 4 Spans */
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:216 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:216 */
 .x-loading-spinner > span.x-loading-right {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:220 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:220 */
 .x-loading-spinner > span.x-loading-bottom {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:224 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:224 */
 .x-loading-spinner > span.x-loading-left {
     -webkit-transform: rotate(270deg);
     transform: rotate(270deg);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:230 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:230 */
 .x-loading-spinner > span::before {
     /* These are the two lines that surround each of the 4 Span lines */
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:234 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:234 */
 .x-loading-spinner > span::after {
     -webkit-transform: rotate(-30deg);
     transform: rotate(-30deg);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins.scss:240 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins.scss:240 */
 .x-loading-spinner {
     /* Set Animation */
     -webkit-animation-name: x-loading-spinner-rotate;
@@ -397,74 +397,74 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:340 */
 .x-dataview-light-body-el > .x-dataview-item {
     color: #353535;
     background-color: #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:355 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:355 */
 .x-dataview-light-body-el > .x-dataview-item.x-odd {
     background-color: #fff;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:359 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:359 */
 .x-dataview-light-body-el > .x-dataview-item.x-hovered {
     color: #282828;
     background-color: #e8e8e8;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:365 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:365 */
 .x-dataview-light-body-el > .x-dataview-item.x-pressed {
     color: #1c1c1c;
     background-color: #dcdcdc;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:385 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:385 */
 .x-dataview-light-body-el.x-show-selection > .x-dataview-item.x-selected {
     color: #020202;
     background-color: #39babf;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:336 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:336 */
 .x-dataview-dark {
     background-color: #353535;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:340 */
 .x-dataview-dark-body-el > .x-dataview-item {
     color: #f5f5f5;
     background-color: #353535;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:355 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:355 */
 .x-dataview-dark-body-el > .x-dataview-item.x-odd {
     background-color: #282828;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:359 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:359 */
 .x-dataview-dark-body-el > .x-dataview-item.x-hovered {
     color: #fff;
     background-color: #424242;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:365 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:365 */
 .x-dataview-dark-body-el > .x-dataview-item.x-pressed {
     color: #fff;
     background-color: #5b5b5b;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:385 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:385 */
 .x-dataview-dark-body-el.x-show-selection > .x-dataview-item.x-selected {
     color: #fff;
     background-color: #39babf;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:340 */
 .x-dataview-large-body-el > .x-dataview-item {
     font-weight: 400;
     font-size: 14px;
     padding: 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:348 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:348 */
 .x-big .x-dataview-large-body-el > .x-dataview-item {
     font-size: 14px;
     padding: 18px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:336 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/Abstract.scss:336 */
 .x-dataview-thumbnails {
     background-color: #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/dataview/DataView.scss:49 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/dataview/DataView.scss:49 */
 .x-dataview-thumbnails .x-dataview-item .thumbnail {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -472,11 +472,11 @@
     background-size: cover;
     cursor: pointer;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/dataview/listswiper/Stepper.scss:2 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/dataview/listswiper/Stepper.scss:2 */
 .x-listswiperstepper .x-text {
     line-height: 1.4;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/dataview/listswiper/Stepper.scss:6 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/dataview/listswiper/Stepper.scss:6 */
 .x-listswiperstepper .subject {
     -webkit-transition-property: -webkit-height;
     -moz-transition-property: -moz-height;
@@ -493,19 +493,19 @@
     font-size: 12px;
     height: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/dataview/listswiper/Stepper.scss:17 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/dataview/listswiper/Stepper.scss:17 */
 .x-listswiperstepper.x-active .subject {
     height: 18px;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/field/Search.scss:1 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/field/Search.scss:1 */
 .x-searchfield {
     background-color: #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/field/Search.scss:5 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/field/Search.scss:5 */
 .x-searchfield.expandable .x-input-el {
     padding-left: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/field/Search.scss:9 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/field/Search.scss:9 */
 .x-searchfield.expandable .x-body-wrap-el {
     -webkit-transition-property: -webkit-width;
     -moz-transition-property: -moz-width;
@@ -517,20 +517,20 @@
     transition-duration: 0.5s;
     width: 180px;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/field/Search.scss:16 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/field/Search.scss:16 */
 .x-searchfield.expandable.x-empty:not(.x-focused) .x-body-wrap-el {
     width: 92px;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/grid/column/Column.scss:2 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/grid/column/Column.scss:2 */
 .x-gridcolumn .x-title-el {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
-/* C:/Users/Darius/Documents/GitHub/packages/local/coworkee/sass/src/grid/column/Column.scss:7 */
+/* C:/inetpub/wwwroot/packages/local/coworkee/sass/src/grid/column/Column.scss:7 */
 .x-gridcolumn .x-trigger-el {
     cursor: pointer;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Toolbar.scss:330 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:330 */
 .x-tabbar-flat {
     background-color: transparent;
     background-image: none;
@@ -538,28 +538,28 @@
     border-style: solid;
     border-color: #e5e5e5;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Toolbar.scss:344 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:344 */
 .x-tabbar-flat .x-title {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Toolbar.scss:374 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:374 */
 .x-tabbar-flat-body-el.x-horizontal > .x-component {
     margin-right: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Toolbar.scss:383 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Toolbar.scss:383 */
 .x-tabbar-flat-body-el.x-horizontal > .x-component:last-child {
     margin-right: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-tab-flat {
     color: #757575;
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1290 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1290 */
 .x-big .x-tab-flat {
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-tab-flat .x-inner-el {
     border-width: 0 0 3px 0;
     border-style: solid;
@@ -568,112 +568,112 @@
     background-image: none;
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-tab-flat .x-inner-el {
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-tab-flat .x-icon-el {
     color: #757575;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-tab-flat .x-arrow-el {
     color: #757575;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-tab-flat.x-hovered .x-inner-el {
     border-color: #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-tab-flat:before {
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1493 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1493 */
 .x-keyboard-mode .x-tab-flat.x-focused {
     color: #353535;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1497 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1497 */
 .x-keyboard-mode .x-tab-flat.x-focused .x-inner-el {
     border-color: #d5d5d5;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1502 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1502 */
 .x-keyboard-mode .x-tab-flat.x-focused .x-icon-el {
     color: #353535;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1506 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1506 */
 .x-keyboard-mode .x-tab-flat.x-focused .x-arrow-el {
     color: #353535;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-tab-flat.x-focused:after {
     border-style: none;
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1528 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1528 */
 .x-big .x-keyboard-mode .x-tab-flat.x-focused:after {
     border-radius: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1478 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/tab/Tab.scss:1478 */
 .x-tab-flat.x-active .x-inner-el {
     border-color: #39babf;
     background-color: transparent;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:2 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:2 */
 .phone-profile .x-list.listing {
     border-top: 1px solid #f5f5f5;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:5 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:5 */
 .phone-profile .x-list.listing .x-listitem-body-el {
     position: relative;
     flex: 1 1;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:11 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:11 */
 .phone-profile .x-list.listing .x-listitem-body .picture {
     flex: 0 0 auto;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:15 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:15 */
 .phone-profile .x-list.listing .x-listitem-body .item-details {
     padding: 0 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:19 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:19 */
 .phone-profile .x-list.listing .x-listitem-body .item-title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:24 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:24 */
 .phone-profile .x-list.listing .x-listitem-body .item-caption {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 12px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/profile/Phone.scss:29 */
+/* C:/inetpub/wwwroot/BIRES/app/profile/Phone.scss:29 */
 .phone-profile .x-list.listing .x-listitem-body .item-stats {
     font-size: 11px;
     text-align: right;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:893 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:893 */
 .x-panel-auth {
     background-color: transparent;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:922 */
 .x-panel-auth > .x-anchor-el .x-pointer-el {
     fill: rgba(18, 61, 64, 0.25);
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:966 */
 .x-panel-auth-body-el {
     padding: 24px;
     background-color: rgba(18, 61, 64, 0.25);
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Panel.scss:987 */
 .x-panel-auth-boxscroller > .x-boxscroller-body > .x-body-el {
     border: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:14 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:14 */
 .auth-login {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -682,157 +682,157 @@
     background-image: url(../resources/images/auth-background.jpg);
     background-position: center;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:19 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:19 */
 .auth-login > .x-body-el {
     background-color: rgba(0, 0, 0, 0.25);
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:23 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:23 */
 .auth-login .x-formpanel {
     width: 256px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:26 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:26 */
 .auth-login .x-formpanel .x-button {
     margin: 5px 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:30 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:30 */
 .auth-login .x-formpanel .x-button .x-big {
     margin: 5px 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:36 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:36 */
 .auth-login .auth-header,
 .auth-login .auth-footer {
     color: white;
     text-align: center;
     padding: 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:42 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:42 */
 .auth-login .auth-header a,
 .auth-login .auth-footer a {
     color: white;
     text-decoration: none;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:49 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:49 */
 .auth-login .auth-header .logo {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
     color: white;
     font-size: 40px;
     line-height: 1;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:56 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:56 */
 .auth-login .auth-header .title,
 .auth-login .auth-header .caption {
     white-space: nowrap;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:60 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:60 */
 .auth-login .auth-header .title {
     font-size: 31px;
     font-weight: bold;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:65 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:65 */
 .auth-login .auth-header .caption {
     font-size: 15px;
     text-transform: uppercase;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:72 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:72 */
 .auth-login .auth-footer .logo {
     font-size: 18px;
     margin-right: 2px;
     margin-left: -4px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:77 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:77 */
 .auth-login .auth-footer .logo::before {
     vertical-align: middle;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/auth/Login.scss:82 */
+/* C:/inetpub/wwwroot/BIRES/app/view/auth/Login.scss:82 */
 .auth-login .auth-footer .label {
     font-weight: bold;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Wizard.scss:1 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Wizard.scss:1 */
 .wizard-screen {
     align-items: center;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Wizard.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Wizard.scss:4 */
 .wizard-screen > .x-body-el {
     max-width: 768px;
     width: 100%;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:15 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:15 */
 .sidebar {
     background-color: #353535;
     color: #f5f5f5;
     overflow: visible;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:25 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:25 */
 .sidebar > .x-dock {
     overflow: visible;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1331 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1331 */
 .sidebar .x-button-large.x-has-text.x-icon-align-left .x-icon-el {
     margin-right: 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1335 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1335 */
 .x-big .sidebar .x-button-large.x-has-text.x-icon-align-left .x-icon-el {
     margin-right: 18px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1341 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1341 */
 .sidebar .x-button-large.x-has-text.x-icon-align-right .x-icon-el {
     margin-left: 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1345 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1345 */
 .x-big .sidebar .x-button-large.x-has-text.x-icon-align-right .x-icon-el {
     margin-left: 18px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .sidebar .x-button-picture.x-has-text .x-inner-el {
     padding: 9.7px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .sidebar .x-button-picture.x-has-text .x-inner-el {
     padding: 9.6px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .sidebar .x-button-picture .x-icon-el {
     width: 33.6px;
     height: 33.6px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .sidebar .x-button-picture .x-icon-el {
     width: 37.8px;
     height: 37.8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .sidebar .x-button-picture .x-icon-el:before {
     font-size: 33.6px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .sidebar .x-button-picture .x-icon-el:before {
     font-size: 37.8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1331 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1331 */
 .sidebar .x-button-picture.x-has-text.x-icon-align-left .x-icon-el {
     margin-right: 9.7px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1335 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1335 */
 .x-big .sidebar .x-button-picture.x-has-text.x-icon-align-left .x-icon-el {
     margin-right: 9.6px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1341 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1341 */
 .sidebar .x-button-picture.x-has-text.x-icon-align-right .x-icon-el {
     margin-left: 9.7px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1345 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1345 */
 .x-big .sidebar .x-button-picture.x-has-text.x-icon-align-right .x-icon-el {
     margin-left: 9.6px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:48 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:48 */
 .sidebar-body-el {
     z-index: 2;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:52 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:52 */
 .sidebar-micro {
     width: 53px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:56 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:56 */
 .sidebar-micro-body-el {
     -webkit-transition-property: -webkit-width;
     -moz-transition-property: -moz-width;
@@ -844,19 +844,19 @@
     transition-duration: 0.25s;
     width: 53px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:61 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:61 */
 .sidebar-micro-body-el > div {
     width: 256px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:65 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:65 */
 .expanded > .x-dock > .sidebar-micro-body-el {
     width: 256px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:70 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:70 */
 .sidebar-slide {
     width: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:74 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:74 */
 .sidebar-slide-body-el {
     -webkit-transition-property: -webkit-margin-left;
     -moz-transition-property: -moz-margin-left;
@@ -870,11 +870,11 @@
     margin-left: -75vw;
     width: 75vw;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:81 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:81 */
 .expanded > .sidebar-slide-body-el {
     margin-left: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:86 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:86 */
 .sidebar-mask {
     background: black;
     display: none;
@@ -886,15 +886,15 @@
     right: 0;
     z-index: 1;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/Sidebar.scss:97 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/Sidebar.scss:97 */
 .sidebar.expanded > .sidebar-mask {
     display: block;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/main/Menu.scss:2 */
+/* C:/inetpub/wwwroot/BIRES/app/view/main/Menu.scss:2 */
 .main-menu .x-dataview-item {
     cursor: pointer;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/main/Menu.scss:5 */
+/* C:/inetpub/wwwroot/BIRES/app/view/main/Menu.scss:5 */
 .main-menu .x-dataview-item .icon {
     display: inline-block;
     font-size: 21px;
@@ -905,18 +905,18 @@
     text-align: center;
     vertical-align: middle;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/main/Menu.scss:15 */
+/* C:/inetpub/wwwroot/BIRES/app/view/main/Menu.scss:15 */
 .x-big .main-menu .x-dataview-item .icon {
     font-size: 21px;
     margin-right: 18px;
     height: 21px;
     width: 21px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/main/Menu.scss:24 */
+/* C:/inetpub/wwwroot/BIRES/app/view/main/Menu.scss:24 */
 .main-menu .x-dataview-dark {
     border-bottom: 2px solid #424242;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:1 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:1 */
 .show-header {
     -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
@@ -925,16 +925,16 @@
     position: relative;
     z-index: 1;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:7 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:7 */
 .show-header > .x-body-el {
     padding: 16px 24px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:11 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:11 */
 .show-header .header-title {
     line-height: 1.4;
     padding: 6px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:15 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:15 */
 .show-header .header-title .icon {
     border-right: 1px solid;
     color: #39babf;
@@ -943,32 +943,32 @@
     margin-right: 8px;
     padding-right: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:24 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:24 */
 .show-header .header-title .name,
 .show-header .header-title .desc {
     white-space: nowrap;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:29 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:29 */
 .show-header .header-title .name {
     color: #39babf;
     font-size: 24px;
     font-weight: 400;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/view/widgets/ShowHeader.scss:35 */
+/* C:/inetpub/wwwroot/BIRES/app/view/widgets/ShowHeader.scss:35 */
 .show-header .header-title .desc {
     font-size: 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-phone {
     background-color: #20c659;
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-phone {
     color: white;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-phone .x-inner-el {
     padding: 8px;
     border-color: #1aa349;
@@ -976,69 +976,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-phone .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-phone.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-phone.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-phone .x-icon-el {
     color: white;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-phone .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-phone .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-phone .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-phone .x-arrow-el {
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-phone.x-hovered {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-phone.x-hovered .x-inner-el {
     border-color: #16893d;
     background-color: #1cac4d;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-phone.x-hovered .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-phone.x-hovered .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-phone:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-phone.x-pressing,
 .x-button-action-phone.x-pressed {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-phone.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-phone.x-pressing .x-inner-el,
 .x-button-action-phone.x-pressed .x-inner-el,
@@ -1047,42 +1047,42 @@
     background-color: #179141;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-phone.x-pressing .x-icon-el,
 .x-button-action-phone.x-pressed .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-phone.x-pressing .x-arrow-el,
 .x-button-action-phone.x-pressed .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-phone.x-focused:after {
     border-color: #d2f4de;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-phone.x-undo {
     color: white;
     background-color: #20c659;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-phone.x-active {
     color: white;
     background-color: #20c659;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-skype {
     background-color: #00aff0;
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-skype {
     color: white;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-skype .x-inner-el {
     padding: 8px;
     border-color: #0091c7;
@@ -1090,69 +1090,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-skype .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-skype.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-skype.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-skype .x-icon-el {
     color: white;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-skype .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-skype .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-skype .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-skype .x-arrow-el {
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-skype.x-hovered {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-skype.x-hovered .x-inner-el {
     border-color: #007ba9;
     background-color: #0099d1;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-skype.x-hovered .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-skype.x-hovered .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-skype:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-skype.x-pressing,
 .x-button-action-skype.x-pressed {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-skype.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-skype.x-pressing .x-inner-el,
 .x-button-action-skype.x-pressed .x-inner-el,
@@ -1161,42 +1161,42 @@
     background-color: #0082b3;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-skype.x-pressing .x-icon-el,
 .x-button-action-skype.x-pressed .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-skype.x-pressing .x-arrow-el,
 .x-button-action-skype.x-pressed .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-skype.x-focused:after {
     border-color: #cceffc;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-skype.x-undo {
     color: white;
     background-color: #00aff0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-skype.x-active {
     color: white;
     background-color: #00aff0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-linkedin {
     background-color: #0077b5;
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-linkedin {
     color: white;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-linkedin .x-inner-el {
     padding: 8px;
     border-color: #005c8c;
@@ -1204,69 +1204,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-linkedin .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-linkedin.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-linkedin.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-linkedin .x-icon-el {
     color: white;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-linkedin .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-linkedin .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-linkedin .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-linkedin .x-arrow-el {
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-linkedin.x-hovered {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-linkedin.x-hovered .x-inner-el {
     border-color: #00486e;
     background-color: #006396;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-linkedin.x-hovered .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-linkedin.x-hovered .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-linkedin:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-linkedin.x-pressing,
 .x-button-action-linkedin.x-pressed {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-linkedin.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-linkedin.x-pressing .x-inner-el,
 .x-button-action-linkedin.x-pressed .x-inner-el,
@@ -1275,42 +1275,42 @@
     background-color: #004f78;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-linkedin.x-pressing .x-icon-el,
 .x-button-action-linkedin.x-pressed .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-linkedin.x-pressing .x-arrow-el,
 .x-button-action-linkedin.x-pressed .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-linkedin.x-focused:after {
     border-color: #cce4f0;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-linkedin.x-undo {
     color: white;
     background-color: #0077b5;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-linkedin.x-active {
     color: white;
     background-color: #0077b5;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-email {
     background-color: #428c8a;
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-email {
     color: white;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-email .x-inner-el {
     padding: 8px;
     border-color: #35706f;
@@ -1318,69 +1318,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-email .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-email.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-email.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-email .x-icon-el {
     color: white;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-email .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-email .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-email .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-email .x-arrow-el {
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-email.x-hovered {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-email.x-hovered .x-inner-el {
     border-color: #2b5b5a;
     background-color: #387776;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-email.x-hovered .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-email.x-hovered .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-email:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-email.x-pressing,
 .x-button-action-email.x-pressed {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-email.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-email.x-pressing .x-inner-el,
 .x-button-action-email.x-pressed .x-inner-el,
@@ -1389,42 +1389,42 @@
     background-color: #2e6261;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-email.x-pressing .x-icon-el,
 .x-button-action-email.x-pressed .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-email.x-pressing .x-arrow-el,
 .x-button-action-email.x-pressed .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-email.x-focused:after {
     border-color: #d9e8e8;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-email.x-undo {
     color: white;
     background-color: #428c8a;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-email.x-active {
     color: white;
     background-color: #428c8a;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-profile {
     background-color: #4867aa;
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-profile {
     color: white;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-profile .x-inner-el {
     padding: 8px;
     border-color: #3c568d;
@@ -1432,69 +1432,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-profile .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-profile.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-profile.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-profile .x-icon-el {
     color: white;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-profile .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-profile .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-profile .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-profile .x-arrow-el {
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-profile.x-hovered {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-profile.x-hovered .x-inner-el {
     border-color: #334978;
     background-color: #3f5a95;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-profile.x-hovered .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-profile.x-hovered .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-profile:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-profile.x-pressing,
 .x-button-action-profile.x-pressed {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-profile.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-profile.x-pressing .x-inner-el,
 .x-button-action-profile.x-pressed .x-inner-el,
@@ -1503,42 +1503,42 @@
     background-color: #364d7f;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-profile.x-pressing .x-icon-el,
 .x-button-action-profile.x-pressed .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-profile.x-pressing .x-arrow-el,
 .x-button-action-profile.x-pressed .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-profile.x-focused:after {
     border-color: #dae1ee;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-profile.x-undo {
     color: white;
     background-color: #4867aa;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-profile.x-active {
     color: white;
     background-color: #4867aa;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-remove {
     background-color: #ff1540;
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-remove {
     color: white;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-remove .x-inner-el {
     padding: 8px;
     border-color: #eb002b;
@@ -1546,69 +1546,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-remove .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-remove.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-remove.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-remove .x-icon-el {
     color: white;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-remove .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-remove .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-remove .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-remove .x-arrow-el {
     color: white;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-remove.x-hovered {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-remove.x-hovered .x-inner-el {
     border-color: #cd0026;
     background-color: #f5002d;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-remove.x-hovered .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-remove.x-hovered .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-remove:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-remove.x-pressing,
 .x-button-action-remove.x-pressed {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-remove.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-remove.x-pressing .x-inner-el,
 .x-button-action-remove.x-pressed .x-inner-el,
@@ -1617,42 +1617,42 @@
     background-color: #d70027;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-remove.x-pressing .x-icon-el,
 .x-button-action-remove.x-pressed .x-icon-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-remove.x-pressing .x-arrow-el,
 .x-button-action-remove.x-pressed .x-arrow-el {
     color: #f0f0f0;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-remove.x-focused:after {
     border-color: #ffd0d9;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-remove.x-undo {
     color: white;
     background-color: #ff1540;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-remove.x-active {
     color: white;
     background-color: #ff1540;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:4 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:4 */
 .action-edit {
     background-color: #fc3;
     color: black;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1283 */
 .x-button-action-edit {
     color: black;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1297 */
 .x-button-action-edit .x-inner-el {
     padding: 8px;
     border-color: #ffc20a;
@@ -1660,69 +1660,69 @@
     background-image: none;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1304 */
 .x-big .x-button-action-edit .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1311 */
 .x-button-action-edit.x-has-text .x-inner-el {
     padding: 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1315 */
 .x-big .x-button-action-edit.x-has-text .x-inner-el {
     padding: 10px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1321 */
 .x-button-action-edit .x-icon-el {
     color: black;
     width: 20px;
     height: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:86 */
 .x-big .x-button-action-edit .x-icon-el {
     width: 22px;
     height: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:93 */
 .x-button-action-edit .x-icon-el:before {
     font-size: 20px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
+/* C:/inetpub/wwwroot/ext/modern/theme-base/sass/etc/mixins/icon.scss:122 */
 .x-big .x-button-action-edit .x-icon-el:before {
     font-size: 22px;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1371 */
 .x-button-action-edit .x-arrow-el {
     color: black;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1438 */
 .x-button-action-edit.x-hovered {
     color: #333;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1442 */
 .x-button-action-edit.x-hovered .x-inner-el {
     border-color: #ebb000;
     background-color: #ffc414;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1447 */
 .x-button-action-edit.x-hovered .x-icon-el {
     color: #333;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1451 */
 .x-button-action-edit.x-hovered .x-arrow-el {
     color: #333;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1456 */
 .x-button-action-edit:before {
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1466 */
 .x-button-action-edit.x-pressing,
 .x-button-action-edit.x-pressed {
     color: #333;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1475 */
 .x-button-action-edit.x-pressing .x-inner-el,
 .x-keyboard-mode .x-button-action-edit.x-pressing .x-inner-el,
 .x-button-action-edit.x-pressed .x-inner-el,
@@ -1731,45 +1731,45 @@
     background-color: #f5b800;
     background-image: none;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1480 */
 .x-button-action-edit.x-pressing .x-icon-el,
 .x-button-action-edit.x-pressed .x-icon-el {
     color: #333;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1484 */
 .x-button-action-edit.x-pressing .x-arrow-el,
 .x-button-action-edit.x-pressed .x-arrow-el {
     color: #333;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/Button.scss:1511 */
 .x-keyboard-mode .x-button-action-edit.x-focused:after {
     border-color: #39babf;
     border-radius: 50%;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:340 */
 .x-listswiperstepper-edit.x-undo {
     color: black;
     background-color: #fc3;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
+/* C:/inetpub/wwwroot/ext/modern/theme-neptune/sass/var/dataview/listswiper/Stepper.scss:349 */
 .x-listswiperstepper-edit.x-active {
     color: black;
     background-color: #fc3;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:41 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:41 */
 a {
     color: #2f9ba0;
     text-decoration: none;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:45 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:45 */
 a:hover {
     text-decoration: underline;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:49 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:49 */
 .x-selected a {
     color: #83efef;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:54 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:54 */
 .picture {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -1784,54 +1784,54 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:62 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:62 */
 .picture {
     height: 38px;
     width: 38px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:66 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:66 */
 .picture.large {
     height: 48px;
     width: 48px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:72 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:72 */
 .caption {
     font-size: 0.7em;
     font-weight: normal;
 }
-/* C:/Users/Darius/Documents/GitHub/ext/packages/core/sass/etc/mixins/animation.scss:17 */
+/* C:/inetpub/wwwroot/ext/packages/core/sass/etc/mixins/animation.scss:17 */
 @-webkit-keyframes rotate-animation {
-    /* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:79 */
+    /* C:/inetpub/wwwroot/BIRES/app/Application.scss:79 */
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-    /* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:80 */
+    /* C:/inetpub/wwwroot/BIRES/app/Application.scss:80 */
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
-/* C:/Users/Darius/Documents/GitHub/ext/packages/core/sass/etc/mixins/animation.scss:20 */
+/* C:/inetpub/wwwroot/ext/packages/core/sass/etc/mixins/animation.scss:20 */
 @keyframes rotate-animation {
-    /* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:79 */
+    /* C:/inetpub/wwwroot/BIRES/app/Application.scss:79 */
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-    /* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:80 */
+    /* C:/inetpub/wwwroot/BIRES/app/Application.scss:80 */
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
     }
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:83 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:83 */
 html,
 body {
     height: 100%;
     margin: 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:88 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:88 */
 body.launching {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1841,7 +1841,7 @@ body.launching {
     background-image: url(../resources/images/auth-background.jpg);
     background-position: center;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:94 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:94 */
 body.launching::before {
     -webkit-animation: rotate-animation 1s linear infinite;
     animation: rotate-animation 1s linear infinite;
@@ -1862,7 +1862,7 @@ body.launching::before {
     width: 41px;
     height: 41px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:113 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:113 */
 .page-constrained > .x-body-el,
 .page-constrained > .x-innerhtml,
 .page-constrained > .x-dock-horizontal {
@@ -1870,88 +1870,88 @@ body.launching::before {
     margin: 0 auto;
     width: 100%;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:122 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:122 */
 .blocks {
     padding: 8px 0 0 8px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:125 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:125 */
 .blocks .x-panel-block {
     margin: 0 8px 8px 0;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:130 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:130 */
 .tablet-profile .blocks > .x-body-el {
     display: flex;
     flex-direction: row;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:134 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:134 */
 .tablet-profile .blocks > .x-body-el > .blocks-column:nth-child(1) {
     flex: 2;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:138 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:138 */
 .tablet-profile .blocks > .x-body-el > .blocks-column:nth-child(2) {
     flex: 1;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:141 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:141 */
 @media screen and (max-width: 800px) {
     .tablet-profile .blocks > .x-body-el > .blocks-column:nth-child(2) {
         flex: 2;
     }
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:146 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:146 */
 @media screen and (max-width: 600px) {
     .tablet-profile .blocks > .x-body-el {
         flex-direction: column;
     }
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:153 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:153 */
 .block-section {
     display: inline-block;
     vertical-align: top;
     line-height: 1.4;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:158 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:158 */
 .block-section .item {
     padding: 0 16px 16px;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:161 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:161 */
 .block-section .item .label {
     color: #278184;
     font-size: 14px;
     text-transform: uppercase;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:167 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:167 */
 .block-section .item .value {
     font-weight: 500;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:175 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:175 */
 .x-dataview-thumbnails .x-dataview-item .thumbnail {
     padding-bottom: 100%;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:180 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:180 */
 .x-portrait .phone-profile .x-dataview-thumbnails .x-dataview-item {
     width: 25%;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:183 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:183 */
 .x-landscape .phone-profile .x-dataview-thumbnails .x-dataview-item {
     width: 20%;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:188 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:188 */
 .tablet-profile .x-dataview-thumbnails .x-dataview-item {
     width: 16.66667%;
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:191 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:191 */
 @media screen and (max-width: 800px) {
     .tablet-profile .x-dataview-thumbnails .x-dataview-item {
         width: 25%;
     }
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:194 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:194 */
 @media screen and (max-width: 400px) {
     .tablet-profile .x-dataview-thumbnails .x-dataview-item {
         width: 33.33333%;
     }
 }
-/* C:/Users/Darius/Documents/GitHub/BIRES/app/Application.scss:197 */
+/* C:/inetpub/wwwroot/BIRES/app/Application.scss:197 */
 @media screen and (max-width: 250px) {
     .tablet-profile .x-dataview-thumbnails .x-dataview-item {
         width: 50%;
